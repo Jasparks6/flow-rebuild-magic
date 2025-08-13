@@ -41,6 +41,18 @@ const services = [
     icon: Wrench,
     image: drillImg,
   },
+  {
+    title: "Plumbing repair",
+    description: "Leaks, faucets, and simple pipe fixes.",
+    icon: Wrench,
+    image: drillImg,
+  },
+  {
+    title: "Carpentry services",
+    description: "Shelving, trim, and custom builds.",
+    icon: Hammer,
+    image: toolboxImg,
+  },
 ];
 
 const Services = () => {
@@ -51,7 +63,12 @@ const Services = () => {
           <p className="text-sm font-semibold text-primary/80">Services</p>
           <h2 className="text-3xl md:text-4xl font-extrabold">Explore our wide range of services</h2>
         </div>
-        <a href="#quote" className="story-link hidden md:inline">Get a quick quote</a>
+        <div className="hidden md:flex items-center gap-2">
+          {["All services", "Minor works", "Installations"].map((c, i) => (
+            <button key={c} className={`h-9 rounded-full px-4 text-sm ${i===0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground hover:bg-accent/80"}`}>{c}</button>
+          ))}
+          <a href="#quote" className="story-link ml-2">Get a quick quote</a>
+        </div>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
@@ -70,7 +87,13 @@ const Services = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground">
-              {s.description}
+              <div className="space-y-2">
+                <p>{s.description}</p>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-semibold text-foreground">From $49</span>
+                  <span className="opacity-70">Popular</span>
+                </div>
+              </div>
             </CardContent>
           </Card>
         ))}

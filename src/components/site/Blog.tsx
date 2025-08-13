@@ -17,7 +17,12 @@ const Blog = () => {
           <p className="text-sm font-semibold text-primary/80">Blog & News</p>
           <h2 className="text-3xl md:text-4xl font-extrabold">Our latest news</h2>
         </div>
-        <a href="#" className="story-link hidden md:inline">View all</a>
+        <div className="hidden md:flex items-center gap-2">
+          {["All", "How-to", "Tips"].map((c, i) => (
+            <button key={c} className={`h-9 rounded-full px-4 text-sm ${i===0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground hover:bg-accent/80"}`}>{c}</button>
+          ))}
+          <a href="#" className="story-link ml-2">View all</a>
+        </div>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {posts.map((p) => (

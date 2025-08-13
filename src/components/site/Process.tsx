@@ -25,13 +25,30 @@ const Process = () => {
             ))}
           </ol>
         </div>
-        <div className="relative rounded-2xl overflow-hidden shadow-xl">
-          <img
-            src={windowImg}
-            alt="Handyman working on a window during a scheduled appointment"
-            loading="lazy"
-            className="w-full h-auto object-cover"
-          />
+        <div className="relative flex items-center justify-center">
+          <div className="w-64 md:w-72 lg:w-80 rounded-[2rem] border bg-card shadow-2xl p-3">
+            <div className="rounded-[1.5rem] bg-background border p-4">
+              <div className="flex items-center justify-between">
+                <div className="h-2 w-12 rounded-full bg-muted" />
+                <div className="h-2 w-2 rounded-full bg-muted" />
+              </div>
+              <div className="mt-4 space-y-3">
+                <div className="rounded-lg border p-3">
+                  <div className="font-semibold">Book a service</div>
+                  <p className="text-muted-foreground text-sm">Select date and time</p>
+                </div>
+                <div className="rounded-lg border p-3">
+                  <div className="font-semibold">Add details</div>
+                  <p className="text-muted-foreground text-sm">Describe your project</p>
+                </div>
+                <div className="rounded-lg border p-3">
+                  <div className="font-semibold">Confirm</div>
+                  <p className="text-muted-foreground text-sm">Get instant confirmation</p>
+                </div>
+              </div>
+              <a href="#quote" className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-full bg-primary text-primary-foreground text-sm">Get a free estimate</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

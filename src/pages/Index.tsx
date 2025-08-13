@@ -2,7 +2,9 @@ import Header from "@/components/site/Header";
 import Hero from "@/components/site/Hero";
 import Services from "@/components/site/Services";
 import Stats from "@/components/site/Stats";
+import Experience from "@/components/site/Experience";
 import Process from "@/components/site/Process";
+import WorkTogether from "@/components/site/WorkTogether";
 import Testimonials from "@/components/site/Testimonials";
 import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
@@ -27,7 +29,9 @@ const Index = () => {
         <Hero />
         <Services />
         <Stats />
+        <Experience />
         <Process />
+        <WorkTogether />
         <Testimonials />
         <Blog />
         <CTA />
