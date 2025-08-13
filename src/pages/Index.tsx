@@ -7,6 +7,9 @@ import Testimonials from "@/components/site/Testimonials";
 import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
+import WhyUs from "@/components/site/WhyUs";
+import Experience from "@/components/site/Experience";
+import ReviewsGoogle from "@/components/site/ReviewsGoogle";
 
 const Index = () => {
   const orgLd = {
@@ -25,9 +28,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <WhyUs />
         <Services />
+        <Experience />
         <Stats />
         <Process />
+        <ReviewsGoogle />
         <Testimonials />
         <Blog />
         <CTA />
