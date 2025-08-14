@@ -13,16 +13,16 @@ import StickyBuyBar from "@/components/site/StickyBuyBar";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
-  const heroRef = useScrollAnimation();
-  const servicesRef = useScrollAnimation();
-  const teamBannerRef = useScrollAnimation();
-  const whyUsRef = useScrollAnimation();
-  const processRef = useScrollAnimation();
-  const ctaBandRef = useScrollAnimation();
-  const reviewsRef = useScrollAnimation();
-  const blogRef = useScrollAnimation();
-  const ctaRef = useScrollAnimation();
-  const footerRef = useScrollAnimation();
+  const heroRef = useScrollAnimation(0.1, 0);
+  const servicesRef = useScrollAnimation(0.1, 0.2);
+  const teamBannerRef = useScrollAnimation(0.1, 0.1);
+  const whyUsRef = useScrollAnimation(0.1, 0.2);
+  const processRef = useScrollAnimation(0.1, 0.1);
+  const ctaBandRef = useScrollAnimation(0.1, 0);
+  const reviewsRef = useScrollAnimation(0.1, 0.2);
+  const blogRef = useScrollAnimation(0.1, 0.1);
+  const ctaRef = useScrollAnimation(0.1, 0);
+  const footerRef = useScrollAnimation(0.1, 0.1);
 
   const orgLd = {
     "@context": "https://schema.org",
