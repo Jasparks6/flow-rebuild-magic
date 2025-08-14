@@ -5,15 +5,16 @@ const Hero = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12">
-      <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <section className="container mx-auto px-4 sm:px-6 py-12 mt-20">
+      <div className="grid lg:grid-cols-2 gap-8 items-stretch">
         {/* Hero Image with Content */}
         <div 
-          className="relative rounded-3xl overflow-hidden h-96"
+          className="relative rounded-3xl overflow-hidden"
           style={{
             backgroundImage: `url('/lovable-uploads/a3d114a1-6da7-445b-958e-1a4c0b715c6d.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            height: '614px'
           }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
@@ -40,7 +41,7 @@ const Hero = () => {
         </div>
         
         {/* Booking Card */}
-        <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+        <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full flex flex-col justify-center">
           <h2 className="text-2xl font-extrabold text-foreground mb-4">
             Book your service today
           </h2>
