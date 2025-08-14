@@ -1,37 +1,62 @@
+import { Button } from "@/components/ui/button";
 import windowImg from "@/assets/service-window.jpg";
 
 const steps = [
-  { id: 1, title: "Contact us", text: "Tell us about your project and timing." },
-  { id: 2, title: "Schedule an appointment", text: "Pick a time that works best for you." },
-  { id: 3, title: "Get your project done!", text: "Our pros complete the job with care." },
+  { 
+    id: 1, 
+    title: "Contact us", 
+    text: "Send your request with photos if possible. We reply quickly with guidance." 
+  },
+  { 
+    id: 2, 
+    title: "Schedule an appointment", 
+    text: "Pick a time that works for you. Same day and weekend slots available." 
+  },
+  { 
+    id: 3, 
+    title: "Get your project done", 
+    text: "We arrive on time, complete the job and tidy up before we leave." 
+  },
 ];
 
 const Process = () => {
   return (
-    <section id="process" className="container mx-auto py-16 md:py-24">
-      <div className="grid gap-10 md:grid-cols-2 items-center">
-        <div>
-          <p className="text-sm font-semibold text-primary/80">Process</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Check how our process is done</h2>
-          <ol className="space-y-5">
-            {steps.map((s) => (
-              <li key={s.id} className="flex gap-4 items-start">
-                <div className="h-9 w-9 rounded-full bg-primary/10 text-primary grid place-items-center font-bold">{s.id}</div>
-                <div>
-                  <div className="font-semibold">{s.title}</div>
-                  <p className="text-muted-foreground">{s.text}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className="relative rounded-2xl overflow-hidden shadow-xl">
-          <img
-            src={windowImg}
-            alt="Handyman working on a window during a scheduled appointment"
-            loading="lazy"
-            className="w-full h-auto object-cover"
-          />
+    <section id="process" className="py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="chip">Process</span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">Check how our process is done</h2>
+            <ol className="mt-6 space-y-5">
+              {steps.map((s) => (
+                <li key={s.id} className="flex gap-3">
+                  <div className="h-8 w-8 shrink-0 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                    {s.id}
+                  </div>
+                  <div>
+                    <h4 className="font-bold">{s.title}</h4>
+                    <p className="text-sm text-muted-foreground">{s.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-6 flex gap-3">
+              <Button size="pill" asChild>
+                <a href="#quote">Get Instant Quote</a>
+              </Button>
+            </div>
+          </div>
+          <div className="justify-self-center">
+            <div className="relative w-[18rem] sm:w-80 mx-auto">
+              <img 
+                src={windowImg} 
+                alt="Process image" 
+                className="relative z-10 w-full rounded-[2rem] border border-slate-200 shadow-soft"
+                loading="lazy"
+              />
+              <div className="absolute -inset-6 -z-0 rounded-[2rem] bg-gradient-to-tr from-primary to-cyan-400 opacity-20 blur-2xl"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

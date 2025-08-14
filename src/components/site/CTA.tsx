@@ -2,16 +2,22 @@ import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
-    <section id="quote" className="py-16 md:py-24">
-      <div className="container mx-auto">
-        <div className="rounded-2xl bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold">Get a quote today for your new project</h2>
-            <p className="opacity-90">Fast response, friendly service, and fair pricing.</p>
+    <section id="quote" className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-8 md:p-12 shadow-soft">
+          <div className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-white/10"></div>
+          <h3 className="text-2xl md:text-3xl font-extrabold">Get a quote today for your new project</h3>
+          <p className="mt-2 text-primary-foreground/85 max-w-2xl">
+            Tell us about your task and receive a quick estimate along with available time slots.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button variant="glass" asChild>
+              <a href="#quote">Get an Instant Quote</a>
+            </Button>
+            <Button variant="glass" asChild>
+              <a href="#contact">Contact us</a>
+            </Button>
           </div>
-          <Button variant="hero" size="pill" asChild>
-            <a href="#contact">Contact us</a>
-          </Button>
         </div>
       </div>
     </section>

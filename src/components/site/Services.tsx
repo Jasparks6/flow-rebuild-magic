@@ -1,79 +1,69 @@
-import { Wrench, Paintbrush, Cable, Hammer } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import drillImg from "@/assets/service-drill.jpg";
 import windowImg from "@/assets/service-window.jpg";
 import toolboxImg from "@/assets/service-toolbox.jpg";
 
 const services = [
   {
-    title: "General repair",
-    description: "Quick fixes and small repairs handled with care.",
-    icon: Wrench,
+    title: "General repairs",
+    description: "Quick fixes for doors, walls, fixtures and more.",
     image: drillImg,
   },
   {
-    title: "Painting & drywall",
-    description: "Clean finishes for walls, ceilings, and more.",
-    icon: Paintbrush,
+    title: "Painting and decorating", 
+    description: "Interior and exterior painting with clean finishes.",
+    image: windowImg,
+  },
+  {
+    title: "Electrical repairs",
+    description: "Outlets, lighting, fans and troubleshooting.",
     image: toolboxImg,
   },
   {
-    title: "Electrical repair",
-    description: "Switches, outlets, lighting, and fixtures.",
-    icon: Cable,
+    title: "Plumbing repair",
+    description: "Leaks, clogs, faucets and fixture installs.",
+    image: drillImg,
+  },
+  {
+    title: "Carpentry and furniture",
+    description: "Shelving, doors, repairs and custom builds.", 
     image: windowImg,
   },
   {
     title: "Furniture assembly",
-    description: "We assemble it right the first time.",
-    icon: Hammer,
+    description: "Flat-pack builds with secure, tidy assembly.",
     image: toolboxImg,
-  },
-  {
-    title: "Window & door",
-    description: "Installation and alignment for smooth operation.",
-    icon: Hammer,
-    image: windowImg,
-  },
-  {
-    title: "Appliance install",
-    description: "Mounting, hookups, and safety checks.",
-    icon: Wrench,
-    image: drillImg,
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="container mx-auto py-16 md:py-24">
-      <div className="mb-10 md:mb-14 flex items-end justify-between">
-        <div>
-          <p className="text-sm font-semibold text-primary/80">Services</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold">Explore our wide range of services</h2>
+    <section id="services" className="py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <span className="chip">Services</span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">
+              Explore our wide range of services
+            </h2>
+          </div>
         </div>
-        <a href="#quote" className="story-link hidden md:inline">Get a quick quote</a>
-      </div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s, i) => (
-          <Card key={i} className="group overflow-hidden border hover:shadow-lg transition-shadow">
-            <div className="relative h-44 overflow-hidden">
+
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => (
+            <a key={service.title} href="#book" className="card p-4 shadow-soft hover:shadow-lg transition-shadow duration-300">
               <img
-                src={s.image}
-                alt={`${s.title} example`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                src={service.image}
+                alt={service.title}
+                className="h-40 w-full object-cover rounded-lg"
                 loading="lazy"
               />
-            </div>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-lg">
-                <s.icon className="text-primary" /> {s.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              {s.description}
-            </CardContent>
-          </Card>
-        ))}
+              <div className="mt-4">
+                <h3 className="font-bold text-lg">{service.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{service.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

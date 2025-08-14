@@ -1,50 +1,51 @@
 import { Button } from "@/components/ui/button";
-import windowImg from "@/assets/service-window.jpg";
+import drillImg from "@/assets/service-drill.jpg";
 
 const WhyUs = () => {
-  const items = [
-    { value: "90+", label: "Happy clients" },
-    { value: "400+", label: "Projects done" },
-    { value: "80+", label: "Team members" },
-  ];
-
   return (
-    <section aria-labelledby="whyus-title" className="container mx-auto py-16 md:py-24">
-      <div className="grid items-stretch gap-6 md:grid-cols-2">
-        {/* Left: dark card */}
-        <article className="rounded-3xl bg-foreground text-background p-8 md:p-12 flex flex-col justify-between shadow-xl">
-          <header className="space-y-4">
-            <p className="text-sm font-semibold text-primary/80">/WHY US/</p>
-            <h2 id="whyus-title" className="text-3xl md:text-5xl font-extrabold leading-tight">
-              Our pro team takes care of everything
-            </h2>
-            <p className="opacity-90 max-w-prose">
-              Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus donec massa porta sit sit.
-            </p>
-          </header>
-          <div className="mt-8 grid grid-cols-3 gap-6">
-            {items.map((it) => (
-              <div key={it.label} className="text-center">
-                <div className="text-2xl md:text-4xl font-extrabold text-primary">{it.value}</div>
-                <div className="opacity-90 text-sm">{it.label}</div>
-              </div>
-            ))}
-          </div>
-        </article>
-
-        {/* Right: image card */}
-        <div className="relative rounded-3xl overflow-hidden shadow-xl">
-          <img
-            src={windowImg}
-            alt="Professional cleaner washing large window"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+    <section id="about" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center">
+          <span className="chip">About us</span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold">We have more than 20 years of experience</h2>
+          <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
+            Reliable, friendly and fully insured. We handle small jobs to multi-day projects with the same attention to detail.
+          </p>
         </div>
-      </div>
-
-      <div className="mt-6 md:mt-8 flex md:justify-end">
-        <Button variant="hero" size="pill">Get a quote</Button>
+        
+        <div className="mt-10 grid md:grid-cols-2 gap-6 items-center">
+          <div className="h-72 md:h-[22rem] rounded-2xl overflow-hidden">
+            <img 
+              src={drillImg} 
+              alt="Licensed technician on site" 
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4">
+            <div className="card p-5 shadow-soft">
+              <p className="text-sm text-muted-foreground">Response time</p>
+              <p className="mt-1 text-2xl font-extrabold">Same day</p>
+              <p className="mt-2 text-sm text-muted-foreground">Emergency bookings available.</p>
+            </div>
+            <div className="card p-5 shadow-soft">
+              <p className="text-sm text-muted-foreground">Satisfaction</p>
+              <p className="mt-1 text-2xl font-extrabold">4.9 average</p>
+              <p className="mt-2 text-sm text-muted-foreground">Across all platforms.</p>
+            </div>
+            <div className="card p-5 shadow-soft">
+              <p className="text-sm text-muted-foreground">Pricing</p>
+              <p className="mt-1 text-2xl font-extrabold">Clear quotes</p>
+              <p className="mt-2 text-sm text-muted-foreground">No hidden fees.</p>
+            </div>
+            <div className="card p-5 shadow-soft">
+              <p className="text-sm text-muted-foreground">Guarantee</p>
+              <p className="mt-1 text-2xl font-extrabold">Work warranty</p>
+              <p className="mt-2 text-sm text-muted-foreground">We stand by our work.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

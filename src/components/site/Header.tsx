@@ -3,27 +3,31 @@ import { PhoneCall } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-40 bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-      <nav className="container mx-auto flex items-center justify-between py-4">
-        <a href="/" aria-label="HandyFlow home" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-lg bg-primary/10 grid place-items-center text-primary font-extrabold">HF</div>
-          <span className="font-extrabold tracking-tight">HandyFlow</span>
-        </a>
-        <div className="hidden md:flex items-center gap-8 text-sm">
-          <a className="story-link" href="#services">Services</a>
-          <a className="story-link" href="#process">Process</a>
-          <a className="story-link" href="#testimonials">Reviews</a>
-          <a className="story-link" href="#blog">News</a>
+    <header className="pointer-events-none fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[70%]">
+      <div className="pointer-events-auto rounded-full glass shadow-lg">
+        <div className="px-4 sm:px-6">
+          <div className="flex h-14 items-center justify-between">
+            <a href="/" className="flex items-center gap-2 font-black text-lg tracking-tight">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                HF
+              </span>
+              HandyFlow
+            </a>
+            <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+              <a className="hover:text-primary transition-colors" href="#services">Services</a>
+              <a className="hover:text-primary transition-colors" href="#about">About</a>
+              <a className="hover:text-primary transition-colors" href="#process">Process</a>
+              <a className="hover:text-primary transition-colors" href="#testimonials">Reviews</a>
+              <a className="hover:text-primary transition-colors" href="#blog">News</a>
+            </nav>
+            <div className="flex items-center gap-2">
+              <Button size="pill" asChild>
+                <a href="#quote">Get an Instant Quote</a>
+              </Button>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-3">
-          <Button variant="soft" size="sm" className="hidden md:inline-flex" asChild>
-            <a href="#contact"><PhoneCall className="mr-1" /> Call us</a>
-          </Button>
-          <Button variant="hero" size="pill" asChild>
-            <a href="#quote">Get a quote</a>
-          </Button>
-        </div>
-      </nav>
+      </div>
     </header>
   );
 };
