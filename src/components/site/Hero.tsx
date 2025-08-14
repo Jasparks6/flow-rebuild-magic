@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-handyman-blue.jpg";
 import BookingModal from "./BookingModal";
 
 const Hero = () => {
@@ -10,7 +9,7 @@ const Hero = () => {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <img 
-          src={heroImg} 
+          src="/lovable-uploads/1ae955d2-bf7c-40bc-8d82-f550d53abcc4.png"
           alt="Professional handyman in blue uniform providing home repair services" 
           className="h-full w-full object-cover"
           loading="eager"
