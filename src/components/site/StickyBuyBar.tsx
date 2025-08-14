@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import vynyrdBadge from "@/assets/vynyrd-badge.png";
+import vynyrdBadge from "@/assets/vynyrd-badge-original.png";
 
 const StickyBuyBar = () => {
   return (
