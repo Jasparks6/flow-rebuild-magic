@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-// Using direct path since assets directory doesn't exist
-const heroImg = "/hero-handyman.jpg";
+// Use the uploaded hero image directly
+const heroImg = "/lovable-uploads/3e6e9c9d-6aac-4f29-a443-5ef3523dbf52.png";
 
 const Hero = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
