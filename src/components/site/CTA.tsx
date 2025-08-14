@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const CTA = () => {
   return (
     <section id="quote" className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-8 md:p-12 shadow-soft">
           <div className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-white/10"></div>
           <h3 className="text-2xl md:text-3xl font-extrabold">Get a quote today for your new project</h3>

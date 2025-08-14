@@ -9,6 +9,7 @@ import ReviewsGoogle from "@/components/site/ReviewsGoogle";
 import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
+import StickyBuyBar from "@/components/site/StickyBuyBar";
 
 const Index = () => {
   const orgLd = {
@@ -25,7 +26,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
       <Header />
-      <main>
+      <main className="pb-20"> {/* Add bottom padding for sticky bar */}
         <Hero />
         <Services />
         <TeamBanner />
@@ -37,6 +38,7 @@ const Index = () => {
         <CTA />
       </main>
       <Footer />
+      <StickyBuyBar />
     </div>
   );
 };

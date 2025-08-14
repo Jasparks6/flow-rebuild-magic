@@ -29,7 +29,7 @@ const posts = [
 const Blog = () => {
   return (
     <section id="blog" className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between">
           <div>
             <span className="chip">Latest news</span>

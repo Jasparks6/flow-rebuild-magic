@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-slate-900/40"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+      <div className="container mx-auto px-4 sm:px-6 py-24 md:py-32">
         <div className="grid md:grid-cols-2 gap-8 items-center text-white">
           <div>
             <h1 className="text-4xl md:text-6xl font-black leading-tight">

@@ -4,7 +4,7 @@ import drillImg from "@/assets/service-drill.jpg";
 const TeamBanner = () => {
   return (
     <section className="py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <div className="card p-6 shadow-soft">
             <h3 className="text-2xl font-extrabold">Our pro team takes care of everything</h3>

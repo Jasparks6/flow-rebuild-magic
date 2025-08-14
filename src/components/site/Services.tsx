@@ -38,7 +38,7 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between gap-6">
           <div>
             <span className="chip">Services</span>

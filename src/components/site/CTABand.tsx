@@ -4,7 +4,7 @@ import windowImg from "@/assets/service-window.jpg";
 const CTABand = () => {
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <div className="h-64 md:h-80 rounded-2xl overflow-hidden">
             <img 
