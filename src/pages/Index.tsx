@@ -10,8 +10,20 @@ import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
 import StickyBuyBar from "@/components/site/StickyBuyBar";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
+  const heroRef = useScrollAnimation();
+  const servicesRef = useScrollAnimation();
+  const teamBannerRef = useScrollAnimation();
+  const whyUsRef = useScrollAnimation();
+  const processRef = useScrollAnimation();
+  const ctaBandRef = useScrollAnimation();
+  const reviewsRef = useScrollAnimation();
+  const blogRef = useScrollAnimation();
+  const ctaRef = useScrollAnimation();
+  const footerRef = useScrollAnimation();
+
   const orgLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -27,17 +39,37 @@ const Index = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
       <Header />
       <main className="pb-20"> {/* Add bottom padding for sticky bar */}
-        <Hero />
-        <Services />
-        <TeamBanner />
-        <WhyUs />
-        <Process />
-        <CTABand />
-        <ReviewsGoogle />
-        <Blog />
-        <CTA />
+        <section ref={heroRef}>
+          <Hero />
+        </section>
+        <section ref={servicesRef}>
+          <Services />
+        </section>
+        <section ref={teamBannerRef}>
+          <TeamBanner />
+        </section>
+        <section ref={whyUsRef}>
+          <WhyUs />
+        </section>
+        <section ref={processRef}>
+          <Process />
+        </section>
+        <section ref={ctaBandRef}>
+          <CTABand />
+        </section>
+        <section ref={reviewsRef}>
+          <ReviewsGoogle />
+        </section>
+        <section ref={blogRef}>
+          <Blog />
+        </section>
+        <section ref={ctaRef}>
+          <CTA />
+        </section>
       </main>
-      <Footer />
+      <footer ref={footerRef}>
+        <Footer />
+      </footer>
       <StickyBuyBar />
     </div>
   );
