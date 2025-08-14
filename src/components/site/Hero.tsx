@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-// Use the uploaded hero image directly
-const heroImg = "/lovable-uploads/3e6e9c9d-6aac-4f29-a443-5ef3523dbf52.png";
 
 const Hero = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <img 
-          src={heroImg}
-          alt="Professional handyman in blue uniform providing home repair services" 
-          className="h-full w-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-slate-900/40"></div>
-      </div>
+    <section className="relative overflow-hidden" style={{
+      backgroundImage: `url('/lovable-uploads/9b468197-a056-452e-a74a-77014da61843.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh'
+    }}>
+      <div className="absolute inset-0 bg-slate-900/40"></div>
       
       <div className="container mx-auto px-4 sm:px-6 py-24 md:py-32">
         <div className="grid md:grid-cols-2 gap-8 items-center text-white">
