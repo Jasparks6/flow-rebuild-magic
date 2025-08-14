@@ -6,7 +6,7 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden" style={{
-      backgroundImage: `url('/lovable-uploads/9b468197-a056-452e-a74a-77014da61843.png')`,
+      backgroundImage: `url('/lovable-uploads/a3d114a1-6da7-445b-958e-1a4c0b715c6d.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       minHeight: '100vh'
