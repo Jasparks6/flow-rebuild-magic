@@ -23,7 +23,7 @@ const StickyBuyBar = () => {
             </Button>
           </div>
           
-          <div className="absolute right-0 flex items-center">
+          <div className="absolute right-4 flex items-center">
             <img 
               src="/lovable-uploads/ad0db551-d3be-4734-b9a7-8eb1f6e7f4b5.png"
               alt="Made with love by Vynyrd" 
