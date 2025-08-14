@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import vynyrdBadge from "@/assets/vynyrd-badge-original.png";
 
 const StickyBuyBar = () => {
   return (
@@ -21,13 +20,9 @@ const StickyBuyBar = () => {
           
           <div className="absolute right-0 flex items-center">
             <img 
-              src={vynyrdBadge} 
+              src="/lovable-uploads/ad0db551-d3be-4734-b9a7-8eb1f6e7f4b5.png"
               alt="Made with love by Vynyrd" 
               className="h-10 w-auto object-contain"
-              onError={(e) => {
-                console.error('Image failed to load:', vynyrdBadge);
-                e.currentTarget.style.display = 'none';
-              }}
             />
           </div>
         </div>
