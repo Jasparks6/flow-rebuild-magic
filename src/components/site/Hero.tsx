@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-import heroImg from "@/assets/hero-handyman-blue.jpg";
+import heroImg from "@/assets/hero-handyman-professional.jpg";
 
 const Hero = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
