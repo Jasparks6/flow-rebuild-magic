@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
         
         {/* Floating Booking Card */}
-        <div className="absolute top-8 right-8 bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 max-w-md w-full animate-fade-in hidden md:block">
+        <div className="absolute bottom-8 right-8 bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 max-w-md w-full animate-fade-in hidden md:block">
           <h2 className="text-2xl font-extrabold text-foreground mb-4">
             Book your service today
           </h2>
