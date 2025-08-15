@@ -1,6 +1,9 @@
 import drillImg from "@/assets/service-drill.jpg";
-import windowImg from "@/assets/service-window.jpg";
-import toolboxImg from "@/assets/service-toolbox.jpg";
+import paintingImg from "@/assets/service-painting.jpg";
+import electricalImg from "@/assets/service-electrical.jpg";
+import plumbingImg from "@/assets/service-plumbing.jpg";
+import carpentryImg from "@/assets/service-carpentry.jpg";
+import assemblyImg from "@/assets/service-assembly.jpg";
 
 const services = [
   {
@@ -11,27 +14,27 @@ const services = [
   {
     title: "Painting and decorating", 
     description: "Interior and exterior painting with clean finishes.",
-    image: windowImg,
+    image: paintingImg,
   },
   {
     title: "Electrical repairs",
     description: "Outlets, lighting, fans and troubleshooting.",
-    image: toolboxImg,
+    image: electricalImg,
   },
   {
     title: "Plumbing repair",
     description: "Leaks, clogs, faucets and fixture installs.",
-    image: drillImg,
+    image: plumbingImg,
   },
   {
     title: "Carpentry and furniture",
     description: "Shelving, doors, repairs and custom builds.", 
-    image: windowImg,
+    image: carpentryImg,
   },
   {
     title: "Furniture assembly",
     description: "Flat-pack builds with secure, tidy assembly.",
-    image: toolboxImg,
+    image: assemblyImg,
   },
 ];
 
