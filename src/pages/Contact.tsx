@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import StickyBuyBar from "@/components/site/StickyBuyBar";
 
 const Contact = () => {
   const contactInfo = [
@@ -326,6 +327,7 @@ const Contact = () => {
       </main>
 
       <Footer />
+      <StickyBuyBar />
     </div>
   );
 };

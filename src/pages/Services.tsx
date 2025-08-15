@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Wrench, Paintbrush, Zap, Droplets, Hammer, Package, Home, Settings, Sparkles } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import StickyBuyBar from "@/components/site/StickyBuyBar";
 
 const Services = () => {
   const services = [
@@ -109,6 +110,7 @@ const Services = () => {
       </main>
 
       <Footer />
+      <StickyBuyBar />
     </div>
   );
 };

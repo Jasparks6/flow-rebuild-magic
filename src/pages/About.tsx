@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import StickyBuyBar from "@/components/site/StickyBuyBar";
 
 const About = () => {
   const stats = [
@@ -276,6 +277,7 @@ const About = () => {
       </main>
 
       <Footer />
+      <StickyBuyBar />
     </div>
   );
 };
