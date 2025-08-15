@@ -75,7 +75,7 @@ const ReviewsGoogle = () => {
             alt="Google" 
             className="h-5 w-5"
           />
-          <a href="#" className="text-teal-600 font-semibold hover:underline">
+          <a href="#" className="text-blue-600 font-semibold hover:underline">
             Read all reviews on Google
           </a>
         </div>
