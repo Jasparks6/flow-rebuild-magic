@@ -70,11 +70,12 @@ const ReviewsGoogle = () => {
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-2">
-          <img 
-            src="https://www.gstatic.com/images/branding/product/2x/google_g_48dp.png" 
-            alt="Google" 
-            className="h-5 w-5"
-          />
+          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
+            <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
+            <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
+            <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
+          </svg>
           <a href="#" className="text-blue-600 font-semibold hover:underline">
             Read all reviews on Google
           </a>
