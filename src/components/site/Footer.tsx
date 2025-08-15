@@ -36,37 +36,26 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-white font-semibold">Main pages</h3>
               <div className="space-y-2 text-sm">
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Preview</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Home V1</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Home V2</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Home V3</a>
+                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Home</a>
                 <a href="#about" className="block text-slate-300 hover:text-white transition-colors">About</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Team members</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Contact V1</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Contact V2</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Contact V3</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
+                <a href="#process" className="block text-slate-300 hover:text-white transition-colors">Process</a>
+                <a href="#testimonials" className="block text-slate-300 hover:text-white transition-colors">Reviews</a>
+                <a href="#blog" className="block text-slate-300 hover:text-white transition-colors">News</a>
+                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
               </div>
             </div>
             
-            {/* Utility Pages */}
+            {/* Services */}
             <div className="space-y-4">
-              <h3 className="text-white font-semibold">Utility pages</h3>
+              <h3 className="text-white font-semibold">Services</h3>
               <div className="space-y-2 text-sm">
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Start here</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Style guide</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">404 not found</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Password protected</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Coming soon</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Licenses</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Changelog</a>
-                <a href="#blog" className="block text-slate-300 hover:text-white transition-colors">Blog V1</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Blog V2</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Blog V3</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Blog post</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Service single</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Products</a>
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Product single</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">General repairs</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Painting and decorating</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Electrical repairs</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Plumbing repair</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Carpentry and furniture</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Furniture assembly</a>
               </div>
             </div>
             
