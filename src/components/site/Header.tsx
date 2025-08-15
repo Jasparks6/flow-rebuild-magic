@@ -11,7 +11,9 @@ const Header = () => {
 
   return (
     <header className="pointer-events-none fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[70%]">
-      <div className="pointer-events-auto rounded-full glass shadow-lg">
+      <div className={`pointer-events-auto glass shadow-lg transition-all duration-300 ease-out ${
+        isMenuOpen ? 'rounded-3xl' : 'rounded-full'
+      }`}>
         <div className="px-4 sm:px-6">
           <div className="flex h-14 items-center justify-between">
             <a href="/" className="flex items-center gap-2 font-black text-lg tracking-tight">
@@ -52,56 +54,58 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Mobile/Tablet Dropdown Menu */}
-        <div className={`lg:hidden absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-md border border-border rounded-2xl shadow-xl overflow-hidden transition-all duration-300 ease-out ${
+        {/* Mobile/Tablet Dropdown Menu - Integrated */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
           isMenuOpen 
-            ? 'opacity-100 scale-100 translate-y-0' 
-            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+            ? 'max-h-80 opacity-100' 
+            : 'max-h-0 opacity-0'
         }`}>
-          <nav className="p-4 space-y-1">
-            <a 
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#services"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#about"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#process"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Process
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#testimonials"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Reviews
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#blog"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              News
-            </a>
-            <div className="pt-2 border-t border-border mt-2">
-              <Button size="pill" className="w-full" asChild>
-                <a href="#quote" onClick={() => setIsMenuOpen(false)}>
-                  Get an Instant Quote
-                </a>
-              </Button>
-            </div>
-          </nav>
+          <div className="border-t border-border/20 px-4 pb-4">
+            <nav className="pt-4 space-y-1">
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#services"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#about"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#process"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Process
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#testimonials"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Reviews
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#blog"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                News
+              </a>
+              <div className="pt-2 mt-2">
+                <Button size="pill" className="w-full" asChild>
+                  <a href="#quote" onClick={() => setIsMenuOpen(false)}>
+                    Get an Instant Quote
+                  </a>
+                </Button>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
