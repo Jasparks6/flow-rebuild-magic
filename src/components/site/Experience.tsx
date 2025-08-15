@@ -1,5 +1,5 @@
 import { Users, ThumbsUp, DollarSign } from "lucide-react";
-import drillImg from "@/assets/service-drill.jpg";
+import experienceImg from "@/assets/experience-team.jpg";
 
 const features = [
   {
@@ -33,7 +33,7 @@ const Experience = () => {
 
       <div className="relative">
         <div className="rounded-3xl overflow-hidden shadow-xl">
-          <img src={drillImg} alt="Pro handyman working on site" className="w-full h-full object-cover" loading="lazy" />
+          <img src={experienceImg} alt="Pro handyman working on site" className="w-full h-full object-cover" loading="lazy" />
         </div>
 
         <div className="pointer-events-none"></div>

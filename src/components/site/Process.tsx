@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import windowImg from "@/assets/service-window.jpg";
+import processImg from "@/assets/process-work.jpg";
 
 const steps = [
   { 
@@ -49,7 +49,7 @@ const Process = () => {
           <div className="justify-self-center">
             <div className="relative w-[18rem] sm:w-80 mx-auto">
               <img 
-                src={windowImg} 
+                src={processImg} 
                 alt="Process image" 
                 className="relative z-10 w-full rounded-[2rem] border border-slate-200 shadow-soft"
                 loading="lazy"
