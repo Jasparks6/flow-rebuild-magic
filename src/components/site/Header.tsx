@@ -23,11 +23,11 @@ const Header = () => {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-              <a className="hover:text-primary transition-colors" href="#services">Services</a>
-              <a className="hover:text-primary transition-colors" href="#about">About</a>
+              <a className="hover:text-primary transition-colors" href="/services">Services</a>
+              <a className="hover:text-primary transition-colors" href="/about">About</a>
               <a className="hover:text-primary transition-colors" href="#process">Process</a>
               <a className="hover:text-primary transition-colors" href="#testimonials">Reviews</a>
-              <a className="hover:text-primary transition-colors" href="#blog">News</a>
+              <a className="hover:text-primary transition-colors" href="/contact">Contact</a>
             </nav>
             
             {/* Desktop CTA Button */}
@@ -62,14 +62,14 @@ const Header = () => {
             <nav className="pt-4 space-y-1">
               <a 
                 className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-                href="#services"
+                href="/services"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </a>
               <a 
                 className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-                href="#about"
+                href="/about"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
@@ -90,10 +90,10 @@ const Header = () => {
               </a>
               <a 
                 className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
-                href="#blog"
+                href="/contact"
                 onClick={() => setIsMenuOpen(false)}
               >
-                News
+                Contact
               </a>
               <div className="pt-2 mt-2">
                 <Button size="pill" className="w-full" asChild>
