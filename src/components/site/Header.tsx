@@ -11,9 +11,7 @@ const Header = () => {
 
   return (
     <header className="pointer-events-none fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[70%]">
-      <div className={`pointer-events-auto glass shadow-lg transition-all duration-300 ease-out ${
-        isMenuOpen ? 'rounded-3xl' : 'rounded-full'
-      }`}>
+      <div className="pointer-events-auto rounded-3xl glass shadow-lg">
         <div className="px-4 sm:px-6">
           <div className="flex h-14 items-center justify-between">
             <a href="/" className="flex items-center gap-2 font-black text-lg tracking-tight">
