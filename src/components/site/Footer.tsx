@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="mt-2 mb-24 px-4" id="contact">
+    <footer className="mt-2 mb-24" id="contact">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="bg-slate-800 rounded-3xl p-8 md:p-12">
           <div className="grid gap-8 md:gap-12 lg:grid-cols-5">
