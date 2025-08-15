@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import drillImg from "@/assets/service-drill.jpg";
+import experienceImg from "@/assets/experience-team.jpg";
 
 const WhyUs = () => {
   return (
@@ -16,7 +16,7 @@ const WhyUs = () => {
         <div className="mt-10 grid md:grid-cols-2 gap-6 items-center">
           <div className="h-72 md:h-[22rem] rounded-2xl overflow-hidden">
             <img 
-              src={drillImg} 
+              src={experienceImg} 
               alt="Licensed technician on site" 
               className="w-full h-full object-cover"
               loading="lazy"

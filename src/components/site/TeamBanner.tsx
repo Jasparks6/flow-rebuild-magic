@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import drillImg from "@/assets/service-drill.jpg";
+import teamBannerImg from "@/assets/team-banner.jpg";
 
 const TeamBanner = () => {
   return (
@@ -17,7 +17,7 @@ const TeamBanner = () => {
           </div>
           <div className="h-72 md:h-96 rounded-2xl overflow-hidden">
             <img 
-              src={drillImg} 
+              src={teamBannerImg} 
               alt="Team at work" 
               className="w-full h-full object-cover"
               loading="lazy"

@@ -1,4 +1,4 @@
-import drillImg from "@/assets/service-drill.jpg";
+import blogRepairImg from "@/assets/blog-repair-mistakes.jpg";
 import toolboxImg from "@/assets/service-toolbox.jpg";
 import windowImg from "@/assets/service-window.jpg";
 
@@ -8,7 +8,7 @@ const posts = [
     description: "Small checks can save hours on the job.",
     date: "Aug 2025",
     readTime: "4 min read",
-    image: drillImg 
+    image: blogRepairImg 
   },
   { 
     title: "5 essential tools that every service van should carry", 
