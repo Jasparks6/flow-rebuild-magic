@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import teamBannerImg from "@/assets/team-banner.jpg";
 
 const TeamBanner = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section className="py-12">
       <div className="container mx-auto px-4 sm:px-6">
@@ -11,7 +14,7 @@ const TeamBanner = () => {
             <p className="mt-2 text-muted-foreground">
               From first contact to final cleanup, our trained technicians follow strict checklists and quality standards.
             </p>
-            <Button variant="soft" className="mt-6">
+            <Button variant="soft" className="mt-6" onClick={openModal}>
               Get Instant Quote
             </Button>
           </div>

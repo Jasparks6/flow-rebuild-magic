@@ -10,9 +10,12 @@ import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
 import StickyBuyBar from "@/components/site/StickyBuyBar";
+import { QuoteModal } from "@/components/site/QuoteModal";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
+  const { isOpen, closeModal } = useQuoteModal();
   const heroRef = useScrollAnimation(0.1, 0);
   const servicesRef = useScrollAnimation(0.1, 0.2);
   const teamBannerRef = useScrollAnimation(0.1, 0.1);
@@ -71,6 +74,7 @@ const Index = () => {
         <Footer />
       </footer>
       <StickyBuyBar />
+      <QuoteModal open={isOpen} onOpenChange={closeModal} />
     </div>
   );
 };

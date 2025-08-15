@@ -1,4 +1,5 @@
 import { Users, ThumbsUp, DollarSign } from "lucide-react";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import experienceImg from "@/assets/experience-team.jpg";
 
 const features = [
@@ -20,6 +21,8 @@ const features = [
 ];
 
 const Experience = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section aria-labelledby="experience-title" className="container mx-auto py-16 md:py-24">
       <header className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
@@ -53,9 +56,12 @@ const Experience = () => {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <a href="#quote" className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-shadow">
+          <button 
+            onClick={openModal}
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+          >
             GET A QUOTE
-          </a>
+          </button>
         </div>
       </div>
     </section>

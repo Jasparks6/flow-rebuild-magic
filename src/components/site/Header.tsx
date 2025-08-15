@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openModal } = useQuoteModal();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,10 +32,9 @@ const Header = () => {
               <a className="hover:text-primary transition-colors" href="/contact">Contact</a>
             </nav>
             
-            {/* Desktop CTA Button */}
             <div className="hidden lg:flex items-center gap-2">
-              <Button size="pill" asChild>
-                <a href="#quote">Get an Instant Quote</a>
+              <Button size="pill" onClick={openModal}>
+                <span>Get an Instant Quote</span>
               </Button>
             </div>
 
@@ -96,10 +97,11 @@ const Header = () => {
                 Contact
               </a>
               <div className="pt-2 mt-2">
-                <Button size="pill" className="w-full" asChild>
-                  <a href="#quote" onClick={() => setIsMenuOpen(false)}>
-                    Get an Instant Quote
-                  </a>
+                <Button size="pill" className="w-full" onClick={() => {
+                  openModal();
+                  setIsMenuOpen(false);
+                }}>
+                  <span>Get an Instant Quote</span>
                 </Button>
               </div>
             </nav>

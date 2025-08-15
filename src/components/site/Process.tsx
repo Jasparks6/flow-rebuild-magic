@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import processImg from "@/assets/process-work.jpg";
 
 const steps = [
@@ -20,6 +21,8 @@ const steps = [
 ];
 
 const Process = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section id="process" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
@@ -41,8 +44,8 @@ const Process = () => {
               ))}
             </ol>
             <div className="mt-6 flex gap-3">
-              <Button size="pill" asChild>
-                <a href="#quote">Get Instant Quote</a>
+              <Button size="pill" onClick={openModal}>
+                Get Instant Quote
               </Button>
             </div>
           </div>

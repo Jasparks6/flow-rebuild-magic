@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 
 const CTA = () => {
+  const { openModal } = useQuoteModal();
   return (
     <section id="quote" className="py-4">
       <div className="container mx-auto px-4 sm:px-6">
@@ -11,8 +13,8 @@ const CTA = () => {
             Tell us about your task and receive a quick estimate along with available time slots.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button variant="glass" asChild>
-              <a href="#quote">Get an Instant Quote</a>
+            <Button variant="glass" onClick={openModal}>
+              Get an Instant Quote
             </Button>
             <Button variant="glass" asChild>
               <a href="#contact">Contact us</a>

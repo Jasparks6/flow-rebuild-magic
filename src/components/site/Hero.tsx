@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 
 const Hero = () => {
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const { openModal } = useQuoteModal();
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 mt-20">
@@ -30,7 +31,7 @@ const Hero = () => {
             <div className="mt-6">
               <Button 
                 size="pill" 
-                onClick={() => setIsBookingModalOpen(true)}
+                onClick={openModal}
                 className="bg-primary hover:brightness-95 text-white font-semibold shadow-lg hover-scale"
               >
                 GET A QUOTE
@@ -55,7 +56,7 @@ const Hero = () => {
               className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
             <Button 
-              onClick={() => setIsBookingModalOpen(true)}
+              onClick={openModal}
               className="rounded-l-none px-6 hover-scale"
             >
               →
@@ -79,7 +80,7 @@ const Hero = () => {
             className="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <Button 
-            onClick={() => setIsBookingModalOpen(true)}
+            onClick={openModal}
             className="rounded-l-none px-4"
           >
             →
@@ -87,44 +88,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Simple modal */}
-      {isBookingModalOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-          onClick={() => setIsBookingModalOpen(false)}
-        >
-          <div 
-            className="bg-white p-8 rounded-2xl max-w-md w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Book your service today</h3>
-            <p className="text-gray-600 mb-6">
-              Lorem ipsum dolor sit amet consectetur amet non venenatis non tempus tortor mauris senectus.
-            </p>
-            <div className="space-y-4">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <div className="flex gap-3">
-                <Button 
-                  onClick={() => setIsBookingModalOpen(false)}
-                  className="flex-1"
-                >
-                  Submit →
-                </Button>
-                <button 
-                  onClick={() => setIsBookingModalOpen(false)}
-                  className="px-4 py-2 text-gray-600 hover:text-gray-800"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

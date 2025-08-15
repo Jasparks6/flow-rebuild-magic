@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import windowImg from "@/assets/service-window.jpg";
 
 const CTABand = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6">
@@ -21,7 +24,7 @@ const CTABand = () => {
               Tell us what you need and we will provide a fair quote with options to fit your budget.
             </p>
             <div className="mt-6 flex gap-3">
-              <Button variant="soft">Get Instant Quote</Button>
+              <Button variant="soft" onClick={openModal}>Get Instant Quote</Button>
               <Button asChild>
                 <a href="#contact">Get a quote</a>
               </Button>
