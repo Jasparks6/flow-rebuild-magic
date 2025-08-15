@@ -1,7 +1,10 @@
-import { Phone, Mail, MapPin, Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Footer = () => {
+  const [isMainPagesOpen, setIsMainPagesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   return (
     <footer className="mt-2 mb-24" id="contact">
       <div className="container mx-auto px-4 sm:px-6">
@@ -34,28 +37,75 @@ const Footer = () => {
             
             {/* Main Pages */}
             <div className="space-y-4">
-              <h3 className="text-white font-semibold">Main pages</h3>
-              <div className="space-y-2 text-sm">
-                <a href="#" className="block text-slate-300 hover:text-white transition-colors">Home</a>
-                <a href="#about" className="block text-slate-300 hover:text-white transition-colors">About</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="#process" className="block text-slate-300 hover:text-white transition-colors">Process</a>
-                <a href="#testimonials" className="block text-slate-300 hover:text-white transition-colors">Reviews</a>
-                <a href="#blog" className="block text-slate-300 hover:text-white transition-colors">News</a>
-                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
+              {/* Desktop version - always visible */}
+              <div className="hidden lg:block">
+                <h3 className="text-white font-semibold">Main pages</h3>
+                <div className="space-y-2 text-sm">
+                  <a href="/" className="block text-slate-300 hover:text-white transition-colors">Home</a>
+                  <a href="/about" className="block text-slate-300 hover:text-white transition-colors">About</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
+                  <a href="#process" className="block text-slate-300 hover:text-white transition-colors">Process</a>
+                  <a href="#testimonials" className="block text-slate-300 hover:text-white transition-colors">Reviews</a>
+                  <a href="/contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
+                </div>
+              </div>
+              
+              {/* Mobile/Tablet version - collapsible */}
+              <div className="lg:hidden">
+                <button 
+                  onClick={() => setIsMainPagesOpen(!isMainPagesOpen)}
+                  className="flex items-center justify-between w-full text-white font-semibold py-2 hover:text-blue-400 transition-colors"
+                >
+                  Main pages
+                  {isMainPagesOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${isMainPagesOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="space-y-2 text-sm pt-2 bg-slate-800 relative z-10">
+                    <a href="/" className="block text-slate-300 hover:text-white transition-colors py-1">Home</a>
+                    <a href="/about" className="block text-slate-300 hover:text-white transition-colors py-1">About</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Services</a>
+                    <a href="#process" className="block text-slate-300 hover:text-white transition-colors py-1">Process</a>
+                    <a href="#testimonials" className="block text-slate-300 hover:text-white transition-colors py-1">Reviews</a>
+                    <a href="/contact" className="block text-slate-300 hover:text-white transition-colors py-1">Contact</a>
+                  </div>
+                </div>
               </div>
             </div>
             
             {/* Services */}
             <div className="space-y-4">
-              <h3 className="text-white font-semibold">Services</h3>
-              <div className="space-y-2 text-sm">
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">General repairs</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Painting and decorating</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Electrical repairs</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Plumbing repair</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Carpentry and furniture</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Furniture assembly</a>
+              {/* Desktop version - always visible */}
+              <div className="hidden lg:block">
+                <h3 className="text-white font-semibold">Services</h3>
+                <div className="space-y-2 text-sm">
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">General repairs</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Painting and decorating</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Electrical repairs</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Plumbing repair</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Carpentry and furniture</a>
+                  <a href="/services" className="block text-slate-300 hover:text-white transition-colors">Furniture assembly</a>
+                </div>
+              </div>
+              
+              {/* Mobile/Tablet version - collapsible */}
+              <div className="lg:hidden">
+                <button 
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full text-white font-semibold py-2 hover:text-blue-400 transition-colors"
+                >
+                  Services
+                  {isServicesOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${isServicesOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="space-y-2 text-sm pt-2 bg-slate-800 relative z-10">
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">General repairs</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Painting and decorating</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Electrical repairs</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Plumbing repair</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Carpentry and furniture</a>
+                    <a href="/services" className="block text-slate-300 hover:text-white transition-colors py-1">Furniture assembly</a>
+                  </div>
+                </div>
               </div>
             </div>
             
