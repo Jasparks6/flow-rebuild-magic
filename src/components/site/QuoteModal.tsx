@@ -454,12 +454,6 @@ export const QuoteModal = ({ open, onOpenChange }: QuoteModalProps) => {
 
           {step === 9 && (
             <div className="space-y-6">
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full mb-4">
-                  <CheckCircle className="h-5 w-5" />
-                  Quote Generated Successfully!
-                </div>
-              </div>
 
               <div className="bg-gradient-to-br from-primary/5 to-blue-50 p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
