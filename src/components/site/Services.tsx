@@ -4,7 +4,9 @@ import electricalImg from "@/assets/service-electrical.jpg";
 import plumbingImg from "@/assets/service-plumbing.jpg";
 import carpentryImg from "@/assets/service-carpentry.jpg";
 import assemblyImg from "@/assets/service-assembly.jpg";
-import { Wrench, Paintbrush, Zap, Droplet, Hammer, Package } from "lucide-react";
+import { Wrench, Paintbrush, Zap, Droplet, Hammer, Package, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
 
 const services = [
   {
@@ -46,15 +48,33 @@ const services = [
 ];
 
 const Services = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section id="services" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
           <div>
-            <span className="chip">Services</span>
-            <h2 className="mt-3 text-4xl md:text-5xl font-extrabold">
+            <span className="text-primary font-bold text-lg">/SERVICES/</span>
+            <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-extrabold">
               Explore our wide range of services
             </h2>
+          </div>
+          <div className="flex gap-3 shrink-0">
+            <Button 
+              onClick={openModal}
+              className="rounded-full px-6 py-6 text-base font-semibold"
+            >
+              GET A QUOTE
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button 
+              variant="outline" 
+              className="rounded-full px-6 py-6 text-base font-semibold"
+              asChild
+            >
+              <a href="/services">BROWSE ALL SERVICES</a>
+            </Button>
           </div>
         </div>
 
