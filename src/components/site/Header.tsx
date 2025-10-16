@@ -35,10 +35,10 @@ const Header = () => {
           <div className="hidden lg:flex items-center">
             <Button 
               onClick={openModal}
-              className="rounded-full px-6 py-5 text-sm font-semibold"
+              className="rounded-full px-8 py-6 text-base font-bold"
             >
-              GET A QUOTE
-              <ArrowRight className="ml-2 w-4 h-4" />
+              Get an Instant Quote
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
 
@@ -100,14 +100,14 @@ const Header = () => {
             </a>
             <div className="pt-2">
               <Button 
-                className="w-full rounded-full py-5 text-sm font-semibold" 
+                className="w-full rounded-full py-6 text-base font-bold" 
                 onClick={() => {
                   openModal();
                   setIsMenuOpen(false);
                 }}
               >
-                GET A QUOTE
-                <ArrowRight className="ml-2 w-4 h-4" />
+                Get an Instant Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </nav>
