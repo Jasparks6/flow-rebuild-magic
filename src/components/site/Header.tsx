@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="pointer-events-none fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[70%]">
+    <header className="pointer-events-none relative z-50 w-full max-w-[1200px] mx-auto px-4 pt-6">
       <div className="pointer-events-auto rounded-3xl glass shadow-lg">
         <div className="px-4 sm:px-6">
           <div className="flex h-14 items-center justify-between">
@@ -24,7 +24,7 @@ const Header = () => {
             </a>
             
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <nav className="hidden lg:flex items-center gap-8 text-base font-medium">
               <a className="hover:text-primary transition-colors" href="/services">Services</a>
               <a className="hover:text-primary transition-colors" href="/about">About</a>
               <a className="hover:text-primary transition-colors" href="#process">Process</a>
