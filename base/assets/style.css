@@ -40,13 +40,11 @@ html {
 
 /* Header */
 .header-fixed {
-  position: fixed;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: 0 auto;
   z-index: 1000;
-  width: 92%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .header-glass {
@@ -104,7 +102,7 @@ html {
   color: var(--foreground);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: color 0.2s;
 }
 
@@ -235,7 +233,7 @@ html {
 
 /* Main Content */
 .main-content {
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
