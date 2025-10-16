@@ -32,7 +32,7 @@ const posts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-16 md:py-24 bg-gray-50">
+    <section id="blog" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between mb-12">
           <div>
