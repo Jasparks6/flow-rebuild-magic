@@ -6,7 +6,7 @@ const Hero = () => {
   const { openModal } = useQuoteModal();
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12 mt-20">
+    <section className="container mx-auto px-4 sm:px-6 py-12 mt-8">
       <div className="relative">
         {/* Hero Image with Content */}
         <div 
@@ -15,24 +15,24 @@ const Hero = () => {
             backgroundImage: `url('/lovable-uploads/a3d114a1-6da7-445b-958e-1a4c0b715c6d.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '614px'
+            height: '750px'
           }}
         >
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="relative z-10 p-8 h-full flex flex-col justify-center max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-black leading-tight text-white drop-shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div className="relative z-10 p-8 md:p-12 h-full flex flex-col justify-end max-w-2xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-white drop-shadow-2xl">
               Affordable home repair services
             </h1>
             
-            <p className="mt-4 text-white/90 max-w-md drop-shadow-md text-lg">
+            <p className="mt-6 text-white/95 max-w-lg drop-shadow-lg text-xl md:text-2xl leading-relaxed">
               Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus donec massa porta sit sit.
             </p>
             
-            <div className="mt-6">
+            <div className="mt-8">
               <Button 
                 size="pill" 
                 onClick={openModal}
-                className="bg-primary hover:brightness-95 text-white font-semibold shadow-lg hover-scale"
+                className="bg-primary hover:brightness-95 text-white font-semibold shadow-lg hover-scale text-lg px-8 py-6"
               >
                 GET A QUOTE
                 <span className="ml-2">→</span>
