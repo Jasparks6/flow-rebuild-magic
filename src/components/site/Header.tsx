@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useQuoteModal } from "@/contexts/QuoteModalContext";
 
 const Header = () => {
@@ -12,105 +12,100 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white py-4 px-4">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <Home className="w-6 h-6 text-white" />
-            </div>
-          </a>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-bold">
-            <a className="hover:text-primary transition-colors" href="/">HOME</a>
-            <a className="hover:text-primary transition-colors" href="/about">ABOUT</a>
-            <a className="hover:text-primary transition-colors" href="/services">SERVICES</a>
-            <a className="hover:text-primary transition-colors" href="#pages">PAGES ▼</a>
-            <a className="hover:text-primary transition-colors" href="#cart">CART (0)</a>
-          </nav>
-          
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
-            <Button 
-              onClick={openModal}
-              className="rounded-full px-8 py-6 text-base font-bold"
-            >
-              Get an Instant Quote
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 hover:bg-secondary/10 rounded-lg transition-colors"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
-        </div>
-        
-        {/* Mobile Dropdown Menu */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
-          isMenuOpen 
-            ? 'max-h-96 opacity-100 mt-4' 
-            : 'max-h-0 opacity-0'
-        }`}>
-          <nav className="space-y-2 pb-4">
-            <a 
-              className="block px-4 py-3 text-sm font-bold hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="/"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              HOME
+    <header className="pointer-events-none relative z-50 w-full max-w-[1200px] mx-auto px-4 pt-6">
+      <div className="pointer-events-auto rounded-3xl glass shadow-lg">
+        <div className="px-4 sm:px-6">
+          <div className="flex h-14 items-center justify-between">
+            <a href="/" className="flex items-center gap-2 font-black text-lg tracking-tight">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                HF
+              </span>
+              HandyFlow
             </a>
-            <a 
-              className="block px-4 py-3 text-sm font-bold hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="/about"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              ABOUT
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-bold hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="/services"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              SERVICES
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-bold hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#pages"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              PAGES
-            </a>
-            <a 
-              className="block px-4 py-3 text-sm font-bold hover:bg-secondary/10 rounded-lg transition-colors" 
-              href="#cart"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              CART (0)
-            </a>
-            <div className="pt-2">
-              <Button 
-                className="w-full rounded-full py-6 text-base font-bold" 
-                onClick={() => {
-                  openModal();
-                  setIsMenuOpen(false);
-                }}
-              >
-                Get an Instant Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-8 text-base font-medium">
+              <a className="hover:text-primary transition-colors" href="/services">Services</a>
+              <a className="hover:text-primary transition-colors" href="/about">About</a>
+              <a className="hover:text-primary transition-colors" href="#process">Process</a>
+              <a className="hover:text-primary transition-colors" href="#testimonials">Reviews</a>
+              <a className="hover:text-primary transition-colors" href="/contact">Contact</a>
+            </nav>
+            
+            <div className="hidden lg:flex items-center gap-2">
+              <Button size="pill" onClick={openModal}>
+                <span>Get an Instant Quote</span>
               </Button>
             </div>
-          </nav>
+
+            {/* Mobile/Tablet Menu Button */}
+            <button
+              className="lg:hidden p-2 hover:bg-secondary/10 rounded-lg transition-colors"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile/Tablet Dropdown Menu - Integrated */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
+          isMenuOpen 
+            ? 'max-h-80 opacity-100' 
+            : 'max-h-0 opacity-0'
+        }`}>
+          <div className="border-t border-border/20 px-4 pb-4">
+            <nav className="pt-4 space-y-1">
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="/services"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="/about"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#process"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Process
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="#testimonials"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Reviews
+              </a>
+              <a 
+                className="block px-4 py-3 text-sm font-medium hover:bg-secondary/10 rounded-lg transition-colors" 
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <div className="pt-2 mt-2">
+                <Button size="pill" className="w-full" onClick={() => {
+                  openModal();
+                  setIsMenuOpen(false);
+                }}>
+                  <span>Get an Instant Quote</span>
+                </Button>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
