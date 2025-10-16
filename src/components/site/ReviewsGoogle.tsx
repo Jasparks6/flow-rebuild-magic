@@ -41,7 +41,7 @@ const ReviewsGoogle = () => {
         {/* Testimonials Grid */}
         <div className="space-y-16 max-w-6xl mx-auto">
           {/* First Testimonial - Image Left, Text Right */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             <div className="h-[400px] rounded-3xl overflow-hidden">
               <img 
                 src={testimonials[0].image}
@@ -50,7 +50,7 @@ const ReviewsGoogle = () => {
                 loading="lazy"
               />
             </div>
-            <div className="bg-gray-100 rounded-3xl p-8 md:p-10">
+            <div className="bg-gray-100 rounded-3xl p-8 md:p-10 h-[400px] flex flex-col justify-center">
               <h3 className="text-3xl md:text-4xl font-extrabold leading-tight" style={{ color: 'hsl(222, 47%, 11%)' }}>
                 "{testimonials[0].quote}"
               </h3>
@@ -77,8 +77,8 @@ const ReviewsGoogle = () => {
           </div>
 
           {/* Second Testimonial - Text Left, Image Right */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="bg-gray-100 rounded-3xl p-8 md:p-10 order-2 md:order-1">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="bg-gray-100 rounded-3xl p-8 md:p-10 h-[400px] flex flex-col justify-center order-2 md:order-1">
               <h3 className="text-3xl md:text-4xl font-extrabold leading-tight" style={{ color: 'hsl(222, 47%, 11%)' }}>
                 "{testimonials[1].quote}"
               </h3>
