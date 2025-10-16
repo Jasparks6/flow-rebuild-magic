@@ -38,7 +38,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
       <Header />
       <main className="pb-20"> {/* Add bottom padding for sticky bar */}

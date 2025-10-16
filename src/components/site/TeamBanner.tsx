@@ -13,7 +13,7 @@ const TeamBanner = () => {
   const { openModal } = useQuoteModal();
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-6 items-stretch">
           {/* Dark Navy Card */}

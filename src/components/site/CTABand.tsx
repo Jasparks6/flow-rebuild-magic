@@ -7,7 +7,7 @@ const CTABand = () => {
   const { openModal } = useQuoteModal();
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div 
           className="relative rounded-3xl overflow-hidden h-[600px] md:h-[500px]"

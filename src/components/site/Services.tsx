@@ -51,7 +51,7 @@ const Services = () => {
   const { openModal } = useQuoteModal();
 
   return (
-    <section id="services" className="py-16 md:py-24">
+    <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
           <div>

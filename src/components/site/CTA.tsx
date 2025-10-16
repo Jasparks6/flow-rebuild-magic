@@ -4,7 +4,7 @@ import { useQuoteModal } from "@/contexts/QuoteModalContext";
 const CTA = () => {
   const { openModal } = useQuoteModal();
   return (
-    <section id="quote" className="py-4">
+    <section id="quote" className="py-4 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-8 md:p-12 shadow-soft">
           <div className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-white/10"></div>
