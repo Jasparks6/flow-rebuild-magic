@@ -1,84 +1,128 @@
-const reviews = [
+import { Button } from "@/components/ui/button";
+import { useQuoteModal } from "@/contexts/QuoteModalContext";
+import { ArrowRight } from "lucide-react";
+
+const testimonials = [
   {
-    name: "Sarah Johnson",
-    time: "2 days ago",
-    text: "Albie was fantastic! He fixed our water heater quickly and explained everything clearly. Very professional and fair pricing.",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
+    quote: "Exceptional craftsmanship throughout our complete home renovation",
+    text: "Lorem ipsum dolor sit amet consectetur sed arcu risus tortor consequat odio donec senectus ac.",
+    name: "John Carter",
+    location: "New York, NY",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=800&auto=format&fit=crop",
   },
   {
-    name: "Mike Rodriguez", 
-    time: "4 days ago",
-    text: "Outstanding service! Called for a drain cleaning emergency and they came out the same day. Quality work and they really care about the community.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
-  },
-  {
-    name: "Lisa Chen",
-    time: "1 week ago", 
-    text: "Professional, reliable, and honest. Fixed our kitchen sink leak and gave us great advice on maintenance.",
-    avatar: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=200&auto=format&fit=crop",
+    quote: "Reliable and meticulous work made the renovation process easy",
+    text: "Lorem ipsum dolor sit amet consectetur sed arcu risus tortor consequat odio donec senectus ac.",
+    name: "Sophie Moore",
+    location: "San Francisco, CA",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
 const ReviewsGoogle = () => {
+  const { openModal } = useQuoteModal();
+
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-extrabold">What Our Customers Say</h2>
-          <div className="mt-3 inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-soft">
-            <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true">
-              <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-              <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-              <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-              <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-            </svg>
-            <span className="font-semibold">Google Reviews</span>
-            <span className="text-yellow-500">★★★★★</span>
-            <span className="text-muted-foreground text-sm">(4.9/5)</span>
-          </div>
-          <p className="mt-3 text-muted-foreground">Real reviews from real customers in your area.</p>
+        {/* Header */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <span className="text-primary font-bold text-lg">/TESTIMONIALS/</span>
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold" style={{ color: 'hsl(222, 47%, 11%)' }}>
+            What our clients say about us
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus donec massa porta sit sit.
+          </p>
         </div>
 
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
-          {reviews.map((review) => (
-            <figure key={review.name} className="card p-6 shadow-soft">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <img 
-                    className="h-10 w-10 rounded-full object-cover" 
-                    src={review.avatar} 
-                    alt="Avatar"
-                    loading="lazy"
-                  />
-                  <div>
-                    <div className="font-semibold">{review.name}</div>
-                    <div className="text-xs text-muted-foreground">{review.time}</div>
+        {/* Testimonials Grid */}
+        <div className="space-y-16 max-w-6xl mx-auto">
+          {/* First Testimonial - Image Left, Text Right */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="h-[400px] rounded-3xl overflow-hidden">
+              <img 
+                src={testimonials[0].image}
+                alt="Home renovation project"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-extrabold leading-tight" style={{ color: 'hsl(222, 47%, 11%)' }}>
+                "{testimonials[0].quote}"
+              </h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                {testimonials[0].text}
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <img 
+                  src={testimonials[0].avatar}
+                  alt={testimonials[0].name}
+                  className="w-12 h-12 rounded-full object-cover"
+                  loading="lazy"
+                />
+                <div>
+                  <div className="font-bold" style={{ color: 'hsl(222, 47%, 11%)' }}>
+                    {testimonials[0].name}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonials[0].location}
                   </div>
                 </div>
-                <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-                  <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-                  <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-                  <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-                  <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-                </svg>
               </div>
-              <div className="mt-3 text-yellow-500">★★★★★</div>
-              <blockquote className="mt-3 text-sm text-muted-foreground">{review.text}</blockquote>
-              <a href="#" className="mt-4 inline-block text-primary text-sm font-semibold">Read more</a>
-            </figure>
-          ))}
+            </div>
+          </div>
+
+          {/* Second Testimonial - Text Left, Image Right */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-3xl md:text-4xl font-extrabold leading-tight" style={{ color: 'hsl(222, 47%, 11%)' }}>
+                "{testimonials[1].quote}"
+              </h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                {testimonials[1].text}
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <img 
+                  src={testimonials[1].avatar}
+                  alt={testimonials[1].name}
+                  className="w-12 h-12 rounded-full object-cover"
+                  loading="lazy"
+                />
+                <div>
+                  <div className="font-bold" style={{ color: 'hsl(222, 47%, 11%)' }}>
+                    {testimonials[1].name}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonials[1].location}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="h-[400px] rounded-3xl overflow-hidden order-1 md:order-2">
+              <img 
+                src={testimonials[1].image}
+                alt="Renovation work"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-            <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-            <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-            <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-            <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-          </svg>
-          <a href="#" className="text-blue-600 font-semibold hover:underline">
-            Read all reviews on Google
-          </a>
+        {/* CTA Button */}
+        <div className="mt-16 flex justify-center">
+          <Button 
+            onClick={openModal}
+            size="lg"
+            className="rounded-full px-8 py-6 text-base font-semibold"
+          >
+            GET A QUOTE
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>
