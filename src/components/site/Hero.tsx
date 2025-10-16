@@ -6,7 +6,7 @@ const Hero = () => {
   const { openModal } = useQuoteModal();
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12 mt-8 bg-white">
+    <section className="container mx-auto px-4 sm:px-6 py-12 pt-24 bg-white">
       <div className="relative">
         {/* Hero Image with Content */}
         <div 
