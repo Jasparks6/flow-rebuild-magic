@@ -42,8 +42,8 @@ const CTABand = () => {
               </div>
             </div>
 
-            {/* Bottom Left: Contact Info - Larger and Bolder */}
-            <div className="hidden md:flex gap-16 text-white items-end absolute bottom-8 left-12">
+            {/* Bottom Center-Right: Contact Info - Larger and Bolder */}
+            <div className="hidden md:flex gap-16 text-white items-end absolute bottom-8 right-20">
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Mail className="w-6 h-6" />
