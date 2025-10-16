@@ -10,7 +10,7 @@ const CTABand = () => {
     <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6">
         <div 
-          className="relative rounded-3xl overflow-hidden h-[500px] md:h-[400px]"
+          className="relative rounded-3xl overflow-hidden h-[600px] md:h-[500px]"
           style={{
             backgroundImage: `url(${windowImg})`,
             backgroundSize: 'cover',
@@ -20,8 +20,8 @@ const CTABand = () => {
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
 
-          {/* Content Grid */}
-          <div className="relative h-full grid md:grid-cols-2 gap-8 items-center p-6 md:p-12">
+          {/* Content Container */}
+          <div className="relative h-full flex flex-col justify-between p-6 md:p-12">
             {/* Left White Card */}
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl max-w-lg">
               <span className="text-primary font-bold text-base">/CONTACT US/</span>
@@ -42,21 +42,21 @@ const CTABand = () => {
               </div>
             </div>
 
-            {/* Right Contact Info */}
-            <div className="hidden md:flex flex-col gap-6 text-white">
+            {/* Bottom Contact Info */}
+            <div className="hidden md:flex gap-12 text-white items-end">
               <div>
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-2">
                   <Mail className="w-5 h-5" />
-                  <h4 className="font-bold text-lg">Contact us</h4>
+                  <h4 className="font-bold text-base">Contact us</h4>
                 </div>
                 <p className="text-white/90 text-sm">Email: contact@handyflow.com</p>
                 <p className="text-white/90 text-sm mt-1">Phone: (123) 456 - 789</p>
               </div>
               
               <div>
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-2">
                   <MapPin className="w-5 h-5" />
-                  <h4 className="font-bold text-lg">Our location</h4>
+                  <h4 className="font-bold text-base">Our location</h4>
                 </div>
                 <p className="text-white/90 text-sm">16 Finland St Pittsburgh,</p>
                 <p className="text-white/90 text-sm">Pennsylvania, PA , 15219</p>
