@@ -21,8 +21,8 @@ const CTABand = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
 
           {/* Content Container */}
-          <div className="relative h-full flex flex-col justify-between p-6 md:p-12">
-            {/* Left White Card */}
+          <div className="relative h-full flex flex-col p-6 md:p-12">
+            {/* Top: Left White Card */}
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl max-w-lg">
               <span className="text-primary font-bold text-base">/CONTACT US/</span>
               <h3 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight" style={{ color: 'hsl(222, 47%, 11%)' }}>
@@ -42,8 +42,8 @@ const CTABand = () => {
               </div>
             </div>
 
-            {/* Bottom Contact Info */}
-            <div className="hidden md:flex gap-12 text-white items-end">
+            {/* Bottom Right: Contact Info */}
+            <div className="hidden md:flex gap-12 text-white items-end justify-end mt-auto">
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <Mail className="w-5 h-5" />
