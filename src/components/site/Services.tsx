@@ -60,17 +60,17 @@ const Services = () => {
               Explore our wide range of services
             </h2>
           </div>
-          <div className="flex gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <Button 
               onClick={openModal}
-              className="rounded-full px-6 py-6 text-base font-semibold"
+              className="rounded-full px-6 py-6 text-base font-semibold w-full sm:w-auto"
             >
               GET A QUOTE
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
               variant="outline" 
-              className="rounded-full px-6 py-6 text-base font-semibold"
+              className="rounded-full px-6 py-6 text-base font-semibold w-full sm:w-auto whitespace-nowrap"
               asChild
             >
               <a href="/services">BROWSE ALL SERVICES</a>
