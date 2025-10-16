@@ -17,8 +17,8 @@ const CTABand = () => {
             backgroundPosition: 'center'
           }}
         >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
+          {/* Dark Overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70"></div>
 
           {/* Content Container */}
           <div className="relative h-full flex flex-col p-6 md:p-12">
