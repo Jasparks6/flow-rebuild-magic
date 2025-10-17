@@ -120,7 +120,7 @@ const ExitPopup = () => {
               </span>
               ?
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mt-2">
               Pay whatever you want and install it in the next 5 mins
             </p>
           </div>
