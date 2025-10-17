@@ -94,7 +94,31 @@ const ExitPopup = () => {
         <div className="p-8 text-center space-y-6">
           <div className="space-y-3">
             <h2 className="text-3xl md:text-4xl font-extrabold text-black">
-              WAIT! Want your new website for just $1?
+              WAIT! Want your new website for just{" "}
+              <span className="relative inline-block">
+                $1
+                <svg
+                  className="absolute -bottom-2 left-0 w-full h-3"
+                  viewBox="0 0 100 12"
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="slashGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: '#9333ea', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#2563eb', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 0 12 Q 25 0, 50 6 T 100 2"
+                    stroke="url(#slashGradient)"
+                    strokeWidth="4"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+              ?
             </h2>
             <p className="text-lg text-muted-foreground">
               Pay whatever you want and install it in the next 5 mins
