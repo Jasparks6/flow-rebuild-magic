@@ -149,23 +149,23 @@ const ExitPopup = () => {
             <h3 className="text-xl font-bold text-black mb-4">Your website includes:</h3>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5 shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse"></div>
+                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
                 <p className="text-base text-gray-700">Professional, mobile-responsive design</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5 shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse"></div>
+                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
                 <p className="text-base text-gray-700">SEO optimized for Google search rankings</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5 shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse"></div>
+                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
                 <p className="text-base text-gray-700">Contact forms and lead capture</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5 shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse"></div>
+                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
                 <p className="text-base text-gray-700">Fast loading and secure hosting</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5 shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse"></div>
+                <div className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
                 <p className="text-base text-gray-700">Easy content management system</p>
               </div>
             </div>
