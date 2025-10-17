@@ -113,13 +113,13 @@ const ExitPopup = () => {
               <img
                 src="https://cdn.vynyrd.com/myhandyman-desktop.jpg"
                 alt="Website Preview"
-                className="absolute top-[3.5%] left-[12.5%] w-[75%] h-[82%] object-cover object-top"
+                className="absolute top-[3.5%] left-[11.5%] w-[77%] h-[82%] object-cover object-top"
               />
             </div>
           </div>
 
           {/* CTA Button */}
-          <div className="space-y-4">
+          <div className="space-y-4 mt-8">
             <Button
               size="lg"
               className="w-full max-w-md text-lg py-6 rounded-full bg-black text-white hover:bg-black/90"
