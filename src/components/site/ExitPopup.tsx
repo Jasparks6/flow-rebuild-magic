@@ -3,6 +3,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import confetti from "canvas-confetti";
+import desktopFrame from "@/assets/vynyrd-desktop-frame.png";
 
 const ExitPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,12 +101,19 @@ const ExitPopup = () => {
           </div>
 
           {/* Mockup Image */}
-          <div className="relative mx-auto max-w-md">
-            <div className="relative rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative mx-auto max-w-2xl">
+            <div className="relative">
+              {/* Desktop Frame */}
+              <img
+                src={desktopFrame}
+                alt="Desktop Frame"
+                className="w-full h-auto relative z-10"
+              />
+              {/* Dynamic Screenshot */}
               <img
                 src="https://cdn.vynyrd.com/myhandyman-desktop.jpg"
                 alt="Website Preview"
-                className="w-full h-auto"
+                className="absolute top-[3.5%] left-[12.5%] w-[75%] h-[82%] object-cover object-top"
               />
             </div>
           </div>
