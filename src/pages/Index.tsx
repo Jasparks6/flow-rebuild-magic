@@ -10,6 +10,7 @@ import Blog from "@/components/site/Blog";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
 import StickyBuyBar from "@/components/site/StickyBuyBar";
+import ExitPopup from "@/components/site/ExitPopup";
 import { QuoteModal } from "@/components/site/QuoteModal";
 import { useQuoteModal } from "@/contexts/QuoteModalContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -74,6 +75,7 @@ const Index = () => {
         <Footer />
       </footer>
       <StickyBuyBar />
+      <ExitPopup />
       <QuoteModal open={isOpen} onOpenChange={closeModal} />
     </div>
   );
