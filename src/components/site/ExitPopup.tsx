@@ -114,7 +114,8 @@ const ExitPopup = () => {
               <img
                 src={mockupPlaceholder}
                 alt="Website Preview"
-                className="absolute top-[3.5%] left-[10%] w-[80%] h-[82%] object-cover object-top"
+                className="absolute top-[4.5%] left-[9%] w-[82%] h-[82%] object-cover object-top"
+                key={mockupPlaceholder}
               />
             </div>
           </div>
