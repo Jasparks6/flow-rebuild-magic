@@ -94,12 +94,12 @@ const ExitPopup = () => {
         <div className="p-8 text-center space-y-6">
           <div className="space-y-3">
             <h2 className="text-3xl md:text-4xl font-extrabold text-black">
-              WAIT! Want your new website for just{" "}
+              WAIT! Want your new website for{" "}
               <span className="relative inline-block">
-                $1
+                just $1
                 <svg
-                  className="absolute -bottom-2 left-0 w-full h-3"
-                  viewBox="0 0 100 12"
+                  className="absolute -bottom-1 left-0 w-full h-3"
+                  viewBox="0 0 100 10"
                   preserveAspectRatio="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -110,9 +110,9 @@ const ExitPopup = () => {
                     </linearGradient>
                   </defs>
                   <path
-                    d="M 0 12 Q 25 0, 50 6 T 100 2"
+                    d="M 5 8 Q 50 2, 95 6"
                     stroke="url(#slashGradient)"
-                    strokeWidth="4"
+                    strokeWidth="5"
                     fill="none"
                     strokeLinecap="round"
                   />
