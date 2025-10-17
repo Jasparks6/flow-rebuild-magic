@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import confetti from "canvas-confetti";
 import desktopFrame from "@/assets/vynyrd-desktop-frame.png";
+import mockupPlaceholder from "@/assets/mockup-placeholder.gif";
 
 const ExitPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,7 +112,7 @@ const ExitPopup = () => {
               />
               {/* Dynamic Screenshot */}
               <img
-                src="https://cdn.vynyrd.com/myhandyman-desktop.jpg"
+                src={mockupPlaceholder}
                 alt="Website Preview"
                 className="absolute top-[3.5%] left-[11.5%] w-[77%] h-[82%] object-cover object-top"
               />
