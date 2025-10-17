@@ -91,7 +91,7 @@ const ExitPopup = () => {
 
         <div className="p-8 text-center space-y-6">
           <div className="space-y-3">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black">
               WAIT! Want your new website for just $1?
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -101,9 +101,9 @@ const ExitPopup = () => {
 
           {/* Mockup Image */}
           <div className="relative mx-auto max-w-md">
-            <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-primary/10">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="/lovable-uploads/ad0db551-d3be-4734-b9a7-8eb1f6e7f4b5.png"
+                src="https://cdn.vynyrd.com/myhandyman-desktop.jpg"
                 alt="Website Preview"
                 className="w-full h-auto"
               />
@@ -114,7 +114,7 @@ const ExitPopup = () => {
           <div className="space-y-4">
             <Button
               size="lg"
-              className="w-full max-w-md text-lg py-6 rounded-full"
+              className="w-full max-w-md text-lg py-6 rounded-full bg-black text-white hover:bg-black/90"
               asChild
             >
               <a href="https://www.vynyrd.com/checkout?name=John&business_name=ABC%20Realty">
@@ -124,7 +124,7 @@ const ExitPopup = () => {
 
             {/* Timer Tag */}
             <div className="flex justify-center">
-              <div className="inline-flex items-center gap-2 bg-destructive text-destructive-foreground px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 🔥 Only available for {formatTime(timeLeft)}
               </div>
             </div>
