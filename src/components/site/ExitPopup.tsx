@@ -124,8 +124,9 @@ const ExitPopup = () => {
 
             {/* Timer Tag */}
             <div className="flex justify-center">
-              <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                🔥 Only available for {formatTime(timeLeft)}
+              <div className="inline-flex items-center gap-2 bg-red-50 text-gray-700 px-4 py-2 rounded-full text-sm">
+                <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                Only available for {formatTime(timeLeft)}
               </div>
             </div>
 
