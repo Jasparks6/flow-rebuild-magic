@@ -98,7 +98,7 @@ const ExitPopup = () => {
               <span className="relative inline-block">
                 just $1
                 <svg
-                  className="absolute -bottom-1 left-0 w-full h-3"
+                  className="absolute -bottom-2 left-0 w-full h-3"
                   viewBox="0 0 100 10"
                   preserveAspectRatio="none"
                   xmlns="http://www.w3.org/2000/svg"
