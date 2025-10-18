@@ -3,62 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{site_title}}</title>
-  <meta name="description" content="{{site_description}}">
-  <link rel="canonical" href="{{site_url}}">
+  <title>HandyFlow - Affordable Home Repair Services</title>
+  <meta name="description" content="HandyFlow offers affordable, professional home repair services. From plumbing and electrical to painting and carpentry, we handle it all with expertise.">
+  <link rel="canonical" href="https://handyflow.com/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="HandyFlow - Affordable Home Repair Services">
+  <meta property="og:description" content="Professional handyman services for all your home repair needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://handyflow.com/">
   
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Styles -->
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
   <link rel="stylesheet" href="assets/style.css">
   
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="{{og_title}}">
-  <meta property="og:description" content="{{og_description}}">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{og_image}}">
-  
-  <!-- Schema.org Structured Data -->
+  <!-- Schema.org markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "{{business_name}}",
-    "url": "{{business_url}}",
-    "description": "{{business_description}}",
-    "areaServed": "{{service_area}}"
+    "@type": "LocalBusiness",
+    "name": "HandyFlow",
+    "description": "Professional handyman and home repair services",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2780 N Beachwood Dr",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90068"
+    },
+    "telephone": "(123) 456-789",
+    "email": "contact@handyflow.com"
   }
   </script>
 </head>
 <body>
-  
-  <!-- Header Section -->
-  <header class="header-fixed">
-    <div class="header-glass">
+
+  <!-- Fixed Header -->
+  <header class="header-fixed header-glass">
+    <div class="container">
       <div class="header-content">
         <!-- Logo -->
         <a href="/" class="logo">
-          <span class="logo-icon">{{logo_initials}}</span>
-          <span class="logo-text">{{business_name}}</span>
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
         </a>
         
         <!-- Desktop Navigation -->
         <nav class="nav-desktop">
-          <a href="/services.html" class="nav-link">{{nav_services}}</a>
-          <a href="/about.html" class="nav-link">{{nav_about}}</a>
-          <a href="#process" class="nav-link">{{nav_process}}</a>
-          <a href="#testimonials" class="nav-link">{{nav_reviews}}</a>
-          <a href="/contact.html" class="nav-link">{{nav_contact}}</a>
+          <a href="/services.html">Services</a>
+          <a href="/about.html">About</a>
+          <a href="#process">Process</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="/contact.html">Contact</a>
         </nav>
         
-        <div class="nav-desktop">
-          <button class="btn btn-primary btn-pill" onclick="openQuoteModal()">
-            <span>{{cta_get_quote}}</span>
-          </button>
-        </div>
+        <!-- CTA Button -->
+        <button class="btn btn-primary hidden-mobile" onclick="openQuoteModal()">
+          <span>Get an Instant Quote</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
 
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
@@ -67,53 +81,52 @@
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
-          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="close-icon" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
       
-      <!-- Mobile Dropdown Menu -->
+      <!-- Mobile Menu -->
       <div class="mobile-menu">
         <nav class="mobile-nav">
-          <a href="/services.html" class="mobile-nav-link">{{nav_services}}</a>
-          <a href="/about.html" class="mobile-nav-link">{{nav_about}}</a>
-          <a href="#process" class="mobile-nav-link">{{nav_process}}</a>
-          <a href="#testimonials" class="mobile-nav-link">{{nav_reviews}}</a>
-          <a href="/contact.html" class="mobile-nav-link">{{nav_contact}}</a>
-          <button class="btn btn-primary btn-pill btn-full" onclick="openQuoteModal()">
-            <span>{{cta_get_quote}}</span>
-          </button>
+          <a href="/services.html" class="mobile-nav-link">Services</a>
+          <a href="/about.html" class="mobile-nav-link">About</a>
+          <a href="#process" class="mobile-nav-link">Process</a>
+          <a href="#testimonials" class="mobile-nav-link">Reviews</a>
+          <a href="/contact.html" class="mobile-nav-link">Contact</a>
+          <button class="btn btn-primary btn-full" onclick="openQuoteModal()">Get an Instant Quote</button>
         </nav>
       </div>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="main-content">
     
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-wrapper">
-          <div class="hero-bg" style="background-image: url('{{hero_image}}')">
+          <div class="hero-bg" style="background-image: url('/lovable-uploads/a3d114a1-6da7-445b-958e-1a4c0b715c6d.png');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-              <h1 class="hero-title">{{hero_headline}}</h1>
-              <p class="hero-subtitle">{{hero_subheadline}}</p>
+              <h1 class="hero-title">Affordable home repair services</h1>
+              <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus donec massa porta sit sit.</p>
               <button class="btn btn-hero" onclick="openQuoteModal()">
-                {{hero_cta_text}}
-                <span class="arrow">→</span>
+                GET A QUOTE
+                <span>→</span>
               </button>
             </div>
           </div>
           
-          <!-- Floating Booking Card -->
+          <!-- Desktop Booking Card -->
           <div class="booking-card">
-            <h2 class="booking-title">{{booking_title}}</h2>
-            <p class="booking-subtitle">{{booking_description}}</p>
+            <h2>Book your service today</h2>
+            <p>Lorem ipsum dolor sit amet consectetur amet non venenatis non tempus tortor mauris senectus.</p>
             <div class="email-input-group">
-              <input type="email" placeholder="{{booking_email_placeholder}}" class="email-input">
+              <input type="email" class="email-input" placeholder="Enter your email">
               <button class="btn btn-primary" onclick="openQuoteModal()">→</button>
             </div>
           </div>
@@ -121,10 +134,10 @@
         
         <!-- Mobile Booking Card -->
         <div class="booking-card-mobile">
-          <h2 class="booking-title-mobile">{{booking_title}}</h2>
-          <p class="booking-subtitle-mobile">{{booking_description}}</p>
+          <h2>Book your service today</h2>
+          <p>Lorem ipsum dolor sit amet consectetur amet non venenatis non tempus tortor mauris senectus.</p>
           <div class="email-input-group">
-            <input type="email" placeholder="{{booking_email_placeholder}}" class="email-input">
+            <input type="email" class="email-input" placeholder="Enter your email">
             <button class="btn btn-primary" onclick="openQuoteModal()">→</button>
           </div>
         </div>
@@ -132,353 +145,394 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services" class="section">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="chip">{{services_chip}}</span>
-            <h2 class="section-title">{{services_headline}}</h2>
+        <div class="services-header">
+          <div class="services-header-text">
+            <span class="chip">/SERVICES/</span>
+            <h2 class="section-title">Explore our wide range of services</h2>
+          </div>
+          <div class="services-header-buttons">
+            <button class="btn btn-primary btn-pill" onclick="openQuoteModal()">
+              GET A QUOTE
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="/services.html" class="btn btn-soft btn-pill">BROWSE ALL SERVICES</a>
           </div>
         </div>
 
         <div class="services-grid">
-          <!-- Service Item 1 -->
           <a href="#book" class="service-card">
-            <img src="{{service_1_image}}" alt="{{service_1_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_1_title}}</h3>
-              <p class="service-description">{{service_1_description}}</p>
+            <img src="/src/assets/service-drill.jpg" alt="General repairs" loading="lazy">
+            <div class="service-card-content">
+              <h3>General repairs</h3>
+              <p>Quick fixes for doors, walls, fixtures and more.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
             </div>
           </a>
           
-          <!-- Service Item 2 -->
-          <a href="#book" class="service-card">
-            <img src="{{service_2_image}}" alt="{{service_2_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_2_title}}</h3>
-              <p class="service-description">{{service_2_description}}</p>
+          <a href="#book" class="service-card service-card-stagger">
+            <img src="/src/assets/service-painting.jpg" alt="Painting and decorating" loading="lazy">
+            <div class="service-card-content">
+              <h3>Painting and decorating</h3>
+              <p>Interior and exterior painting with clean finishes.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"></path>
+                <path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"></path>
+                <path d="M14.5 17.5 4.5 15"></path>
+              </svg>
             </div>
           </a>
           
-          <!-- Service Item 3 -->
           <a href="#book" class="service-card">
-            <img src="{{service_3_image}}" alt="{{service_3_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_3_title}}</h3>
-              <p class="service-description">{{service_3_description}}</p>
+            <img src="/src/assets/service-electrical.jpg" alt="Electrical repairs" loading="lazy">
+            <div class="service-card-content">
+              <h3>Electrical repairs</h3>
+              <p>Outlets, lighting, fans and troubleshooting.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
             </div>
           </a>
           
-          <!-- Service Item 4 -->
-          <a href="#book" class="service-card">
-            <img src="{{service_4_image}}" alt="{{service_4_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_4_title}}</h3>
-              <p class="service-description">{{service_4_description}}</p>
+          <a href="#book" class="service-card service-card-stagger">
+            <img src="/src/assets/service-plumbing.jpg" alt="Plumbing repair" loading="lazy">
+            <div class="service-card-content">
+              <h3>Plumbing repair</h3>
+              <p>Leaks, clogs, faucets and fixture installs.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
             </div>
           </a>
           
-          <!-- Service Item 5 -->
           <a href="#book" class="service-card">
-            <img src="{{service_5_image}}" alt="{{service_5_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_5_title}}</h3>
-              <p class="service-description">{{service_5_description}}</p>
+            <img src="/src/assets/service-carpentry.jpg" alt="Carpentry and furniture" loading="lazy">
+            <div class="service-card-content">
+              <h3>Carpentry and furniture</h3>
+              <p>Shelving, doors, repairs and custom builds.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"></path>
+                <path d="M17.64 15 22 10.64"></path>
+                <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"></path>
+              </svg>
             </div>
           </a>
           
-          <!-- Service Item 6 -->
-          <a href="#book" class="service-card">
-            <img src="{{service_6_image}}" alt="{{service_6_title}}" class="service-image" loading="lazy">
-            <div class="service-content">
-              <h3 class="service-title">{{service_6_title}}</h3>
-              <p class="service-description">{{service_6_description}}</p>
+          <a href="#book" class="service-card service-card-stagger">
+            <img src="/src/assets/service-assembly.jpg" alt="Furniture assembly" loading="lazy">
+            <div class="service-card-content">
+              <h3>Furniture assembly</h3>
+              <p>Flat-pack builds with secure, tidy assembly.</p>
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                <line x1="12" y1="22" x2="12" y2="12"></line>
+              </svg>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Team Banner Section -->
-    <section class="team-banner-section">
+    <!-- Team Banner -->
+    <section class="team-banner">
       <div class="container">
-        <div class="team-grid">
-          <div class="team-card">
-            <h3 class="team-title">{{team_headline}}</h3>
-            <p class="team-description">{{team_description}}</p>
-            <button class="btn btn-soft" onclick="openQuoteModal()">{{team_cta}}</button>
+        <div class="team-banner-grid">
+          <div class="team-banner-card">
+            <div class="team-banner-content">
+              <h2>Our pro team takes care of everything</h2>
+              <p>From quick fixes to full installations, we deliver reliable results with respectful service and clear communication.</p>
+            </div>
+            <div class="team-banner-stats">
+              <div class="stat-item">
+                <div class="stat-value">90+</div>
+                <div class="stat-label">5-star reviews</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">400+</div>
+                <div class="stat-label">Projects completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">80+</div>
+                <div class="stat-label">Happy clients</div>
+              </div>
+            </div>
           </div>
-          <div class="team-image-wrapper">
-            <img src="{{team_image}}" alt="{{team_image_alt}}" class="team-image" loading="lazy">
+          <div class="team-banner-image">
+            <img src="/src/assets/team-banner.jpg" alt="Professional team at work" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="about" class="why-us-section">
+    <!-- About/Why Us Section -->
+    <section id="about" class="section">
       <div class="container">
-        <div class="section-header-center">
-          <span class="chip">{{about_chip}}</span>
-          <h2 class="section-title">{{about_headline}}</h2>
-          <p class="section-subtitle">{{about_description}}</p>
+        <div class="section-header">
+          <span class="chip">/ABOUT US/</span>
+          <h2 class="section-title">We have more than 20 years of experience</h2>
+          <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus donec massa porta sit sit.</p>
         </div>
         
-        <div class="why-us-grid">
-          <div class="why-us-image-wrapper">
-            <img src="{{about_image}}" alt="{{about_image_alt}}" class="why-us-image" loading="lazy">
+        <div class="experience-wrapper">
+          <div class="experience-image">
+            <img src="/src/assets/experience-team.jpg" alt="Professional handyman at work on site" loading="lazy">
           </div>
           
-          <div class="features-grid">
-            <!-- Feature 1 -->
+          <div class="feature-cards">
             <div class="feature-card">
-              <p class="feature-label">{{feature_1_label}}</p>
-              <p class="feature-value">{{feature_1_value}}</p>
-              <p class="feature-description">{{feature_1_description}}</p>
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Experienced team members</h3>
+              <p>Lorem ipsum dolor sit amet consectetur in congue enim.</p>
             </div>
             
-            <!-- Feature 2 -->
             <div class="feature-card">
-              <p class="feature-label">{{feature_2_label}}</p>
-              <p class="feature-value">{{feature_2_value}}</p>
-              <p class="feature-description">{{feature_2_description}}</p>
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 10v12"></path>
+                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path>
+                </svg>
+              </div>
+              <h3>Fast & reliable</h3>
+              <p>Lorem ipsum dolor sit amet consectetur in congue enim.</p>
             </div>
             
-            <!-- Feature 3 -->
             <div class="feature-card">
-              <p class="feature-label">{{feature_3_label}}</p>
-              <p class="feature-value">{{feature_3_value}}</p>
-              <p class="feature-description">{{feature_3_description}}</p>
-            </div>
-            
-            <!-- Feature 4 -->
-            <div class="feature-card">
-              <p class="feature-label">{{feature_4_label}}</p>
-              <p class="feature-value">{{feature_4_value}}</p>
-              <p class="feature-description">{{feature_4_description}}</p>
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3>Affordable service rates</h3>
+              <p>Lorem ipsum dolor sit amet consectetur in congue enim.</p>
             </div>
           </div>
+        </div>
+
+        <div class="cta-center">
+          <button class="btn btn-primary btn-pill" onclick="openQuoteModal()">
+            GET A QUOTE
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Process Section -->
-    <section id="process" class="process-section">
+    <section id="process" class="section">
       <div class="container">
         <div class="process-grid">
           <div class="process-content">
-            <span class="chip">{{process_chip}}</span>
-            <h2 class="section-title">{{process_headline}}</h2>
-            <ol class="process-steps">
-              <!-- Step 1 -->
-              <li class="process-step">
-                <div class="step-number">1</div>
-                <div>
-                  <h4 class="step-title">{{process_step_1_title}}</h4>
-                  <p class="step-description">{{process_step_1_description}}</p>
-                </div>
-              </li>
+            <span class="chip">/PROCESS/</span>
+            <h2 class="section-title">Check how our process is done</h2>
+
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-number">STEP 01</div>
+                <h3>Contact us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur sed arcu risus tortor consequat odio donec senectus ac.</p>
+              </div>
               
-              <!-- Step 2 -->
-              <li class="process-step">
-                <div class="step-number">2</div>
-                <div>
-                  <h4 class="step-title">{{process_step_2_title}}</h4>
-                  <p class="step-description">{{process_step_2_description}}</p>
-                </div>
-              </li>
+              <div class="process-step">
+                <div class="step-number">STEP 02</div>
+                <h3>Schedule an appointment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur sed arcu risus tortor consequat odio donec senectus ac.</p>
+              </div>
               
-              <!-- Step 3 -->
-              <li class="process-step">
-                <div class="step-number">3</div>
-                <div>
-                  <h4 class="step-title">{{process_step_3_title}}</h4>
-                  <p class="step-description">{{process_step_3_description}}</p>
-                </div>
-              </li>
-            </ol>
-            <button class="btn btn-primary btn-pill" onclick="openQuoteModal()">{{process_cta}}</button>
+              <div class="process-step">
+                <div class="step-number">STEP 03</div>
+                <h3>Get your project done!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur sed arcu risus tortor consequat odio donec senectus ac.</p>
+              </div>
+            </div>
           </div>
+
           <div class="process-image-wrapper">
-            <div class="process-image-container">
-              <img src="{{process_image}}" alt="{{process_image_alt}}" class="process-image" loading="lazy">
-              <div class="process-glow"></div>
+            <div class="process-image">
+              <img src="/src/assets/process-work.jpg" alt="Our service process visualization" loading="lazy">
             </div>
+            <button class="process-cta-btn btn btn-primary btn-pill" onclick="openQuoteModal()">
+              GET A QUOTE
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Band Section -->
-    <section class="cta-band-section">
+    <!-- Reviews/Testimonials Section -->
+    <section id="testimonials" class="section">
       <div class="container">
-        <div class="cta-band-grid">
-          <div class="cta-band-image-wrapper">
-            <img src="{{cta_band_image}}" alt="{{cta_band_image_alt}}" class="cta-band-image" loading="lazy">
+        <div class="section-header">
+          <span class="chip">/TESTIMONIALS/</span>
+          <h2 class="section-title">What our customers are saying about our team</h2>
+          <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur amet venenatis non tempus tortor mauris senectus.</p>
+        </div>
+
+        <div class="testimonial-large">
+          <div class="testimonial-image-left">
+            <img src="/lovable-uploads/729579d7-ddb0-4e21-acc6-4126b364166d.png" alt="John Carter - Happy customer" loading="lazy">
           </div>
-          <div class="cta-band-card">
-            <span class="chip">{{cta_band_chip}}</span>
-            <h3 class="cta-band-title">{{cta_band_headline}}</h3>
-            <p class="cta-band-description">{{cta_band_description}}</p>
-            <div class="cta-band-buttons">
-              <button class="btn btn-soft" onclick="openQuoteModal()">{{cta_band_cta_1}}</button>
-              <a href="#contact" class="btn btn-primary">{{cta_band_cta_2}}</a>
+          <div class="testimonial-content">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="/lovable-uploads/9b468197-a056-452e-a74a-77014da61843.png" alt="John Carter">
+              <div>
+                <div class="testimonial-name">John Carter</div>
+                <div class="testimonial-location">Los Angeles, CA</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-      <div class="container">
-        <div class="testimonials-header">
-          <h2 class="section-title">{{testimonials_headline}}</h2>
-          <div class="google-badge">
-            <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true">
-              <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-              <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-              <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-              <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
+        <div class="testimonial-large testimonial-reverse">
+          <div class="testimonial-content">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="/lovable-uploads/ad0db551-d3be-4734-b9a7-8eb1f6e7f4b5.png" alt="Sophie Moore">
+              <div>
+                <div class="testimonial-name">Sophie Moore</div>
+                <div class="testimonial-location">San Francisco, CA</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-image-right">
+            <img src="/lovable-uploads/8ff3a0b5-55e4-450f-933d-1f724b4c50c3.png" alt="Sophie Moore - Satisfied client" loading="lazy">
+          </div>
+        </div>
+
+        <div class="cta-center">
+          <button class="btn btn-primary btn-pill" onclick="openQuoteModal()">
+            GET A QUOTE
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-            <span class="google-text">{{google_reviews_text}}</span>
-            <span class="stars">★★★★★</span>
-            <span class="rating">{{google_rating}}</span>
-          </div>
-          <p class="testimonials-subtitle">{{testimonials_subheadline}}</p>
-        </div>
-
-        <div class="testimonials-grid">
-          <!-- Review 1 -->
-          <figure class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="reviewer-info">
-                <img class="reviewer-avatar" src="{{review_1_avatar}}" alt="{{review_1_name}}" loading="lazy">
-                <div>
-                  <div class="reviewer-name">{{review_1_name}}</div>
-                  <div class="review-time">{{review_1_time}}</div>
-                </div>
-              </div>
-              <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-                <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-                <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-                <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-                <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-              </svg>
-            </div>
-            <div class="review-stars">★★★★★</div>
-            <blockquote class="review-text">{{review_1_quote}}</blockquote>
-            <a href="#" class="review-link">{{review_read_more}}</a>
-          </figure>
-          
-          <!-- Review 2 -->
-          <figure class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="reviewer-info">
-                <img class="reviewer-avatar" src="{{review_2_avatar}}" alt="{{review_2_name}}" loading="lazy">
-                <div>
-                  <div class="reviewer-name">{{review_2_name}}</div>
-                  <div class="review-time">{{review_2_time}}</div>
-                </div>
-              </div>
-              <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-                <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-                <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-                <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-                <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-              </svg>
-            </div>
-            <div class="review-stars">★★★★★</div>
-            <blockquote class="review-text">{{review_2_quote}}</blockquote>
-            <a href="#" class="review-link">{{review_read_more}}</a>
-          </figure>
-          
-          <!-- Review 3 -->
-          <figure class="testimonial-card">
-            <div class="testimonial-header">
-              <div class="reviewer-info">
-                <img class="reviewer-avatar" src="{{review_3_avatar}}" alt="{{review_3_name}}" loading="lazy">
-                <div>
-                  <div class="reviewer-name">{{review_3_name}}</div>
-                  <div class="review-time">{{review_3_time}}</div>
-                </div>
-              </div>
-              <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-                <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-                <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-                <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-                <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-              </svg>
-            </div>
-            <div class="review-stars">★★★★★</div>
-            <blockquote class="review-text">{{review_3_quote}}</blockquote>
-            <a href="#" class="review-link">{{review_read_more}}</a>
-          </figure>
-        </div>
-
-        <div class="all-reviews-link">
-          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-            <path fill="#EA4335" d="M24 9.5c3.3 0 6.3 1.1 8.6 3.2l6.4-6.4C35.5 2.3 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.5 13.6 17.8 9.5 24 9.5z"/>
-            <path fill="#34A853" d="M24 48c6.1 0 11.3-2 15-5.3l-7.2-5.7c-2 1.3-4.6 2.1-7.8 2.1-6 0-11.1-4-12.9-9.5H3.2l-7.9 6.1C-1 44.6 10.6 48 24 48z"/>
-            <path fill="#4A90E2" d="M45.7 24.5c0-1.5-.1-2.6-.4-3.8H24v7.3h12.4c-.5 3-2.1 5.5-4.6 7.2l7.2 5.7c4.2-3.9 6.7-9.7 6.7-16.4z"/>
-            <path fill="#FBBC05" d="M10.9 29.6c-.5-1.4-.9-2.9-.9-4.6s.3-3.2.9-4.6l-7.8-6.1C1.1 17.5 0 20.6 0 25s1.1 7.5 3.1 10.7l7.8-6.1z"/>
-          </svg>
-          <a href="{{google_reviews_url}}" class="all-reviews-text">{{google_all_reviews_text}}</a>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="blog-section">
+    <section id="blog" class="section">
       <div class="container">
         <div class="blog-header">
           <div>
-            <span class="chip">{{blog_chip}}</span>
-            <h2 class="section-title">{{blog_headline}}</h2>
+            <span class="chip">/OUR BLOG/</span>
+            <h2 class="section-title">Our latest news</h2>
           </div>
-          <a href="#" class="explore-link">
-            <span class="chip">{{blog_explore_all}}</span>
-          </a>
+          <button class="btn btn-soft btn-pill hidden-mobile">BROWSE ALL ARTICLES</button>
         </div>
 
         <div class="blog-grid">
-          <!-- Blog Post 1 -->
           <article class="blog-card">
-            <img src="{{blog_1_image}}" alt="{{blog_1_title}}" class="blog-image" loading="lazy">
-            <h3 class="blog-title">{{blog_1_title}}</h3>
-            <p class="blog-description">{{blog_1_description}}</p>
-            <p class="blog-meta">{{blog_1_date}} • {{blog_1_read_time}}</p>
+            <div class="blog-image">
+              <img src="/src/assets/blog-repair-mistakes.jpg" alt="What are the common problems that a handyman can fix?" loading="lazy">
+            </div>
+            <h3>What are the common problems that a handyman can fix?</h3>
+            <div class="blog-meta">
+              <span class="blog-category">ARTICLES</span>
+              <span class="blog-date">Jan 6, 2025</span>
+            </div>
           </article>
           
-          <!-- Blog Post 2 -->
           <article class="blog-card">
-            <img src="{{blog_2_image}}" alt="{{blog_2_title}}" class="blog-image" loading="lazy">
-            <h3 class="blog-title">{{blog_2_title}}</h3>
-            <p class="blog-description">{{blog_2_description}}</p>
-            <p class="blog-meta">{{blog_2_date}} • {{blog_2_read_time}}</p>
+            <div class="blog-image">
+              <img src="/src/assets/service-toolbox.jpg" alt="10 essential tools that every handyman should have" loading="lazy">
+            </div>
+            <h3>10 essential tools that every handyman should have</h3>
+            <div class="blog-meta">
+              <span class="blog-category">TIPS</span>
+              <span class="blog-date">Jan 6, 2025</span>
+            </div>
           </article>
           
-          <!-- Blog Post 3 -->
           <article class="blog-card">
-            <img src="{{blog_3_image}}" alt="{{blog_3_title}}" class="blog-image" loading="lazy">
-            <h3 class="blog-title">{{blog_3_title}}</h3>
-            <p class="blog-description">{{blog_3_description}}</p>
-            <p class="blog-meta">{{blog_3_date}} • {{blog_3_read_time}}</p>
+            <div class="blog-image">
+              <img src="/src/assets/service-window.jpg" alt="Creative ideas for storage in small spaces: Handyman solutions" loading="lazy">
+            </div>
+            <h3>Creative ideas for storage in small spaces: Handyman solutions</h3>
+            <div class="blog-meta">
+              <span class="blog-category">RESOURCES</span>
+              <span class="blog-date">Jan 6, 2025</span>
+            </div>
           </article>
+        </div>
+
+        <div class="cta-center show-mobile">
+          <button class="btn btn-soft btn-pill">BROWSE ALL ARTICLES</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band-card">
+          <div class="cta-band-content">
+            <h2>Get a quote for your home improvement project today</h2>
+            <p>We offer professional, reliable services at competitive rates.</p>
+            <button class="btn btn-glass" onclick="openQuoteModal()">GET A QUOTE</button>
+          </div>
+          <div class="cta-band-contact">
+            <div class="cta-contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>contact@handyflow.com</span>
+            </div>
+            <div class="cta-contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(123) 456 - 789</span>
+            </div>
+            <div class="cta-contact-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>2780 N Beachwood Dr, Los Angeles</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section id="quote" class="final-cta-section">
+    <section class="section section-cta">
       <div class="container">
-        <div class="final-cta-card">
-          <div class="final-cta-glow"></div>
-          <h3 class="final-cta-title">{{final_cta_headline}}</h3>
-          <p class="final-cta-description">{{final_cta_description}}</p>
-          <div class="final-cta-buttons">
-            <button class="btn btn-glass" onclick="openQuoteModal()">{{final_cta_btn_1}}</button>
-            <a href="#contact" class="btn btn-glass">{{final_cta_btn_2}}</a>
+        <div class="cta-card">
+          <div class="cta-decoration"></div>
+          <h3>Get a quote today for your new project</h3>
+          <p>Tell us about your task and receive a quick estimate along with available time slots.</p>
+          <div class="cta-buttons">
+            <button class="btn btn-glass" onclick="openQuoteModal()">Get an Instant Quote</button>
+            <a href="#contact" class="btn btn-glass">Contact us</a>
           </div>
         </div>
       </div>
@@ -486,7 +540,7 @@
 
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="footer" id="contact">
     <div class="container">
       <div class="footer-card">
@@ -494,15 +548,15 @@
           <!-- Company Info & Newsletter -->
           <div class="footer-company">
             <div class="footer-logo">
-              <div class="footer-logo-icon">{{footer_logo_initials}}</div>
-              <span class="footer-logo-text">{{footer_business_name}}</span>
+              <div class="footer-logo-icon">HF</div>
+              <span class="footer-logo-text">HandyFlow</span>
             </div>
-            <p class="footer-description">{{footer_description}}</p>
+            <p class="footer-description">Lorem ipsum dolor sit amet consectetur sed venenatis dictum at fermentum.</p>
             
-            <div class="newsletter">
-              <h3 class="newsletter-title">{{newsletter_title}}</h3>
+            <div class="footer-newsletter">
+              <h3>Subscribe to our newsletter</h3>
               <div class="newsletter-form">
-                <input type="email" placeholder="{{newsletter_placeholder}}" class="newsletter-input">
+                <input type="email" placeholder="Enter your email">
                 <button class="newsletter-btn">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -514,70 +568,68 @@
           </div>
           
           <!-- Main Pages -->
-          <div class="footer-links">
-            <button class="footer-section-toggle" onclick="toggleFooterSection(this)">
-              <span class="footer-section-title">{{footer_main_pages}}</span>
+          <div class="footer-section">
+            <button class="footer-section-title" onclick="toggleFooterSection(this)">
+              Main pages
               <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
             <div class="footer-section-content">
-              <a href="/" class="footer-link">{{footer_link_home}}</a>
-              <a href="/about.html" class="footer-link">{{footer_link_about}}</a>
-              <a href="/services.html" class="footer-link">{{footer_link_services}}</a>
-              <a href="#process" class="footer-link">{{footer_link_process}}</a>
-              <a href="#testimonials" class="footer-link">{{footer_link_reviews}}</a>
-              <a href="/contact.html" class="footer-link">{{footer_link_contact}}</a>
+              <a href="/" class="footer-link">Home</a>
+              <a href="/about.html" class="footer-link">About</a>
+              <a href="/services.html" class="footer-link">Services</a>
+              <a href="#process" class="footer-link">Process</a>
+              <a href="#testimonials" class="footer-link">Reviews</a>
+              <a href="/contact.html" class="footer-link">Contact</a>
             </div>
           </div>
           
           <!-- Services -->
-          <div class="footer-links">
-            <button class="footer-section-toggle" onclick="toggleFooterSection(this)">
-              <span class="footer-section-title">{{footer_services}}</span>
+          <div class="footer-section">
+            <button class="footer-section-title" onclick="toggleFooterSection(this)">
+              Services
               <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
             <div class="footer-section-content">
-              <a href="/services.html" class="footer-link">{{footer_service_1}}</a>
-              <a href="/services.html" class="footer-link">{{footer_service_2}}</a>
-              <a href="/services.html" class="footer-link">{{footer_service_3}}</a>
-              <a href="/services.html" class="footer-link">{{footer_service_4}}</a>
-              <a href="/services.html" class="footer-link">{{footer_service_5}}</a>
-              <a href="/services.html" class="footer-link">{{footer_service_6}}</a>
+              <a href="/services.html" class="footer-link">General repairs</a>
+              <a href="/services.html" class="footer-link">Painting and decorating</a>
+              <a href="/services.html" class="footer-link">Electrical repairs</a>
+              <a href="/services.html" class="footer-link">Plumbing repair</a>
+              <a href="/services.html" class="footer-link">Carpentry and furniture</a>
+              <a href="/services.html" class="footer-link">Furniture assembly</a>
             </div>
           </div>
           
           <!-- Contact & Location -->
-          <div class="footer-contact">
-            <div class="contact-section">
-              <h3 class="contact-title">
+          <div class="footer-contact-section">
+            <div class="footer-contact-group">
+              <h3 class="footer-contact-title">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
-                {{contact_us_title}}
+                Contact us
               </h3>
-              <div class="contact-info">
-                <div>{{contact_email_label}}: <a href="mailto:{{contact_email}}" class="contact-link">{{contact_email}}</a></div>
-                <div>{{contact_phone_label}}: <a href="tel:{{contact_phone_raw}}" class="contact-link">{{contact_phone}}</a></div>
+              <div class="footer-contact-info">
+                <div>Email: <a href="mailto:contact@handyflow.com">contact@handyflow.com</a></div>
+                <div>Phone: <a href="tel:+1234567890">(123) 456 - 789</a></div>
               </div>
             </div>
             
-            <div class="location-section">
-              <h3 class="contact-title">
+            <div class="footer-contact-group">
+              <h3 class="footer-contact-title">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                {{location_title}}
+                Our location
               </h3>
-              <div class="location-address">
-                {{location_address_line_1}}<br>
-                {{location_address_line_2}}
+              <div class="footer-location">
+                2780 N Beachwood Dr,<br>
+                Los Angeles, CA 90068
               </div>
             </div>
           </div>
@@ -585,26 +637,32 @@
         
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-          <div class="copyright">{{copyright_text}}</div>
+          <div class="copyright">
+            Copyright © HandyFlow | Designed by BRIX Templates - Powered by Webflow
+          </div>
           <div class="social-links">
-            <a href="{{social_facebook}}" class="social-link" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="{{social_twitter}}" class="social-link" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
               </svg>
             </a>
-            <a href="{{social_instagram}}" class="social-link" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
               </svg>
             </a>
-            <a href="{{social_linkedin}}" class="social-link" aria-label="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
           </div>
@@ -615,9 +673,58 @@
 
   <!-- Sticky Buy Bar -->
   <div class="sticky-buy-bar">
-    <div class="buy-bar-content">
-      <p class="buy-bar-text">{{sticky_bar_text}}</p>
-      <a href="{{sticky_bar_link}}" class="buy-bar-btn">{{sticky_bar_btn}}</a>
+    <div class="sticky-buy-content">
+      <p>Love your new website? Buy now and pay what you want!</p>
+      <a href="https://www.vynyrd.com/checkout?name=John&business_name=ABC%20Realty" class="sticky-buy-btn">Buy now</a>
+    </div>
+  </div>
+
+  <!-- Exit Popup Modal -->
+  <div id="exitPopup" class="exit-popup">
+    <div class="exit-popup-overlay" onclick="closeExitPopup()"></div>
+    <div class="exit-popup-content">
+      <button class="exit-popup-close" onclick="closeExitPopup()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="exit-popup-body">
+        <h2>
+          WAIT! Want your new website for
+          <span class="exit-underline-wrapper">
+            just $1
+            <svg class="exit-underline" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="slashGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M 5 8 Q 50 2, 95 6" stroke="url(#slashGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </span>
+          ?
+        </h2>
+        <p class="exit-popup-subtitle">Pay whatever you want and install it in the next 5 mins</p>
+
+        <div class="exit-mockup">
+          <img src="/src/assets/vynyrd-desktop-frame.png" alt="Desktop Frame" class="exit-frame">
+          <img src="/src/assets/mockup-placeholder.gif" alt="Website Preview" class="exit-screenshot">
+        </div>
+
+        <a href="https://www.vynyrd.com/checkout?name=John&business_name=ABC%20Realty" class="btn btn-exit">
+          Buy and Install Now
+        </a>
+
+        <div class="exit-timer">
+          <span class="exit-timer-dot"></span>
+          Only available for <span id="exitTimer">23:58:30</span>
+        </div>
+
+        <p class="exit-guarantee">✓ 30-Day Money-Back Guarantee</p>
+      </div>
     </div>
   </div>
 
@@ -626,25 +733,19 @@
     <div class="modal-overlay" onclick="closeQuoteModal()"></div>
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title">{{modal_title}}</h2>
-        <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+        <h2 class="modal-title">Request a Quote</h2>
+        <button class="modal-close" onclick="closeQuoteModal()">×</button>
       </div>
       <form class="modal-form" onsubmit="handleQuoteSubmit(event)">
-        <input type="text" placeholder="{{modal_name_placeholder}}" class="form-input" required>
-        <input type="email" placeholder="{{modal_email_placeholder}}" class="form-input" required>
-        <input type="tel" placeholder="{{modal_phone_placeholder}}" class="form-input">
-        <textarea placeholder="{{modal_message_placeholder}}" class="form-textarea" rows="4"></textarea>
-        <button type="submit" class="btn btn-primary btn-full">{{modal_submit_btn}}</button>
+        <input type="text" class="form-input" placeholder="Your name" required>
+        <input type="email" class="form-input" placeholder="Your email" required>
+        <input type="tel" class="form-input" placeholder="Your phone">
+        <textarea class="form-textarea" placeholder="Tell us about your project" rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
       </form>
     </div>
   </div>
 
-  <!-- JavaScript -->
   <script src="assets/script.js"></script>
 </body>
 </html>

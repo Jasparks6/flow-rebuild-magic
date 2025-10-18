@@ -1,7 +1,6 @@
-/* Static HTML/CSS Template - AI Automation Ready */
-/* All placeholders use {{double_curly_braces}} format */
+/* HandyFlow - Static HTML/CSS Template */
 
-/* Reset & Base Styles */
+/* === Global & Variables === */
 * {
   margin: 0;
   padding: 0;
@@ -9,22 +8,41 @@
 }
 
 :root {
-  --primary: #0b5fff;
-  --primary-dark: #0847cc;
-  --background: #f1f3f4;
-  --foreground: #0b1220;
-  --muted: #64748b;
-  --card-bg: #ffffff;
-  --border: #e2e8f0;
-  --shadow: rgba(2, 8, 23, 0.08);
+  /* Colors - HSL values matching React design system */
+  --primary: 220 100% 52%;
+  --primary-foreground: 0 0% 100%;
+  --background: 220 14.3% 95.9%;
+  --foreground: 220 71.4% 4.1%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --border: 220 13% 91%;
+  
+  /* Typography */
+  --font-family: 'Onest', system-ui, -apple-system, sans-serif;
+  
+  /* Spacing */
+  --container-max-width: 1400px;
+  --container-padding: 1.5rem;
+  
+  /* Radius */
+  --radius: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  background: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-family);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
